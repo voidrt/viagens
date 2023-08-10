@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/light_theme/colors.dart';
+import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class LoginButton extends StatelessWidget {
-  final Function()? onTap;
+  const LoginButton({
+    super.key,
+    required this.onTap,
+    required this.text,
+  });
 
-  const LoginButton({super.key, required this.onTap});
+  final Function()? onTap;
+  final String text;
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +18,20 @@ class LoginButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(25),
-        margin: const EdgeInsets.symmetric(horizontal: 25),
+        margin: const EdgeInsets.fromLTRB(
+          Paddings.big,
+          Paddings.bigger,
+          Paddings.big,
+          Paddings.kDefault,
+        ),
         decoration: BoxDecoration(
           color: Colors.black,
           borderRadius: BorderRadius.circular(8),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            "Sign In",
-            style: TextStyle(
+            text,
+            style: const TextStyle(
               color: AppColors.background,
               fontWeight: FontWeight.bold,
               fontSize: 16,

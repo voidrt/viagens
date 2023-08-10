@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/login_page/screens/log_in.dart';
+import 'package:turismo_mobile/login_page/screens/login_screen.dart';
 import 'package:turismo_mobile/theme/light_theme/app_theme.dart';
 
 void main() {

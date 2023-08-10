@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/login_page/components/auth_row.dart';
+import 'package:turismo_mobile/login_page/components/sign_row.dart';
 import 'package:turismo_mobile/login_page/components/divider_text.dart';
 import 'package:turismo_mobile/login_page/components/icon_header.dart';
 import 'package:turismo_mobile/login_page/components/buttons.dart';
@@ -20,7 +20,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Utils.unfocusFunction(context),
+      onTap: () => Utils.unfocus(context),
       child: Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: SafeArea(
@@ -33,12 +33,12 @@ class LoginPage extends StatelessWidget {
                   const IconHeader(),
                   AppTextField(
                     controller: usernameController,
-                    hintText: 'Username',
+                    hintText: 'Usuario',
                     obscureText: false,
                   ),
                   AppTextField(
                     controller: passwordController,
-                    hintText: 'Password',
+                    hintText: 'Senha',
                     obscureText: true,
                   ),
                   Padding(
@@ -49,7 +49,7 @@ class LoginPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
-                          'Forgot Password?',
+                          'Esqueceu sua senha?',
                           style:
                               Theme.of(context).textTheme.bodySmall!.copyWith(
                                     fontSize: FontSize.small,
@@ -58,8 +58,9 @@ class LoginPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 25),
+                  const SizedBox(height: Paddings.bigger),
                   LoginButton(
+                    text: 'Entrar',
                     onTap: signUserIn,
                   ),
                   const DividerText(),
@@ -69,12 +70,12 @@ class LoginPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Not a member?',
+                        'Nao eh registrado?',
                         style: TextStyle(color: Colors.grey[700]),
                       ),
                       const SizedBox(width: 4),
                       const Text(
-                        'Register now',
+                        'Registre-se agora',
                         style: TextStyle(
                           color: AppColors.primary,
                           fontWeight: FontWeight.bold,

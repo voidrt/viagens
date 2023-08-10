@@ -7,9 +7,11 @@ class DividerText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(
-        horizontal: Paddings.big,
-        vertical: Paddings.bigger,
+      padding: const EdgeInsets.fromLTRB(
+        Paddings.big,
+        Paddings.bigger / 1.5,
+        Paddings.big,
+        Paddings.bigger / 1.5,
       ),
       child: Row(
         children: [
