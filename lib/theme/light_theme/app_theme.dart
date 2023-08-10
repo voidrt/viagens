@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/theme/light/colors.dart';
-import 'package:turismo_mobile/theme/light/text.dart';
+import 'package:turismo_mobile/theme/light_theme/colors.dart';
+import 'package:turismo_mobile/theme/light_theme/text.dart';
 
 class LightTheme {
   static ThemeData lightThemeSettings = ThemeData(
@@ -10,6 +10,7 @@ class LightTheme {
     textTheme: const TextTheme().copyWith(
       bodySmall: Texts.bodySmall,
       displayMedium: Texts.titleMedium,
+      displayLarge: Texts.titleLarge,
     ),
     //? COLORS
     unselectedWidgetColor: Colors.white.withOpacity(0.67),
