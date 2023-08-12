@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/light_theme/colors.dart';
 
-class SignInText extends StatelessWidget {
-  const SignInText({super.key});
+class CreateAccountText extends StatelessWidget {
+  const CreateAccountText({super.key});
 
   @override
   Widget build(BuildContext context) {

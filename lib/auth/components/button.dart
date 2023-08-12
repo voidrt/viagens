@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/light_theme/colors.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
-class LoginButton extends StatelessWidget {
-  const LoginButton({
+class BoldButton extends StatelessWidget {
+  const BoldButton({
     super.key,
     required this.onTap,
     required this.text,

@@ -23,7 +23,7 @@ class IconHeader extends StatelessWidget {
             bottom: Paddings.bigger,
           ),
           child: Text(
-            'Bem-vindo de volta\nSentimos sua falta!',
+            'Bem-vindo de volta!\nSentimos sua falta...',
             style: Theme.of(context)
                 .textTheme
                 .bodySmall!

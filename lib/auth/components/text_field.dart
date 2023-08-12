@@ -37,9 +37,9 @@ class AppTextField extends StatelessWidget {
           fillColor: Theme.of(context).colorScheme.onBackground,
           filled: true,
           hintText: hintText,
-          hintStyle: TextStyle(
-            color: AppColors.black.withOpacity(0.5),
-          ),
+          hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
+                color: AppColors.black.withOpacity(0.5),
+              ),
         ),
       ),
     );

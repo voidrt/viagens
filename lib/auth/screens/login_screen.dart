@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/login_page/components/icon_header.dart';
-import 'package:turismo_mobile/login_page/components/layout_column.dart';
+import 'package:turismo_mobile/auth/components/page_header.dart';
+import 'package:turismo_mobile/auth/components/layout_column.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
-import 'package:turismo_mobile/utils/utils.dart';
+import 'package:turismo_mobile/core/utils/utils.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   void signUserIn() {}
 
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const IconHeader(),
-                  LoginPageLayout(),
+                  LoginScreenLayout(),
                 ],
               ),
             ),

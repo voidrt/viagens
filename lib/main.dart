@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/login_page/screens/login_screen.dart';
+import 'package:turismo_mobile/core/go_router/routes.dart';
 import 'package:turismo_mobile/theme/light_theme/app_theme.dart';
 
 void main() {
@@ -11,12 +11,12 @@ class Turismo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: LoginPage(),
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       theme: LightTheme.lightThemeSettings,
       themeMode: ThemeMode.light,
       darkTheme: ThemeData.dark(),
+      routerConfig: Routes.appRoutes,
     );
   }
 }

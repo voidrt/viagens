@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/login_page/components/forgot_password.dart';
-import 'package:turismo_mobile/login_page/components/acc_sign_row.dart';
-import 'package:turismo_mobile/login_page/components/divider_text.dart';
-import 'package:turismo_mobile/login_page/components/buttons.dart';
-import 'package:turismo_mobile/login_page/components/sign_in_text.dart';
-import 'package:turismo_mobile/login_page/components/text_field.dart';
+import 'package:turismo_mobile/auth/components/forgot_password.dart';
+import 'package:turismo_mobile/auth/components/acc_login_row.dart';
+import 'package:turismo_mobile/auth/components/divider_text.dart';
+import 'package:turismo_mobile/auth/components/button.dart';
+import 'package:turismo_mobile/auth/components/sign_in_text.dart';
+import 'package:turismo_mobile/auth/components/text_field.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
-class LoginPageLayout extends StatelessWidget {
-  LoginPageLayout({super.key});
+class LoginScreenLayout extends StatelessWidget {
+  LoginScreenLayout({super.key});
 
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
@@ -30,14 +30,14 @@ class LoginPageLayout extends StatelessWidget {
           obscureText: true,
         ),
         const ForgotPassword(),
-        LoginButton(
+        BoldButton(
           text: 'Entrar',
           onTap: signUserIn,
         ),
         const DividerText(),
-        const AuthRow(),
+        const AccLoginRow(),
         const SizedBox(height: Paddings.bigger),
-        const SignInText()
+        const CreateAccountText()
       ],
     );
   }

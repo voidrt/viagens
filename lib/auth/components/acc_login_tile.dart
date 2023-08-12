@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class AccountAuthTile extends StatelessWidget {
-  final String imagePath;
-  final dynamic signInFunction;
+  final String imageFile;
+  final dynamic loginFunc;
 
   const AccountAuthTile({
     super.key,
-    required this.imagePath,
-    required this.signInFunction,
+    required this.imageFile,
+    required this.loginFunc,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: signInFunction,
+      onTap: loginFunc,
       child: Container(
         padding: const EdgeInsets.all(Paddings.big),
         decoration: BoxDecoration(
@@ -22,9 +22,12 @@ class AccountAuthTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
           color: Theme.of(context).colorScheme.onBackground,
         ),
-        child: Image.asset(
-          imagePath,
-          height: 40,
+        child: Center(
+          child: Image.asset(
+            'assets/images/$imageFile',
+            alignment: Alignment.topCenter,
+            scale: 11,
+          ),
         ),
       ),
     );
