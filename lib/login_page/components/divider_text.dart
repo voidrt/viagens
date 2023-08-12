@@ -7,11 +7,8 @@ class DividerText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        Paddings.big,
-        Paddings.bigger / 1.5,
-        Paddings.big,
-        Paddings.bigger / 1.5,
+      padding: const EdgeInsets.symmetric(
+        vertical: Paddings.bigger / 1.5,
       ),
       child: Row(
         children: [
@@ -24,7 +21,7 @@ class DividerText extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Text(
-              'Or continue with',
+              'Ou continue com:',
               style: TextStyle(color: Colors.grey[700]),
             ),
           ),

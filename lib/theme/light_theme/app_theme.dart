@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/light_theme/colors.dart';
-import 'package:turismo_mobile/theme/light_theme/text.dart';
+import 'package:turismo_mobile/theme/text_settings/text.dart';
 
 class LightTheme {
   static ThemeData lightThemeSettings = ThemeData(
@@ -14,18 +14,14 @@ class LightTheme {
     ),
     //? COLORS
     unselectedWidgetColor: Colors.white.withOpacity(0.67),
-    colorScheme: const ColorScheme(
+    colorScheme: ColorScheme.fromSeed(
+      seedColor: AppColors.primary,
       brightness: Brightness.light,
       primary: AppColors.primary,
-      onPrimary: AppColors.black,
       secondary: AppColors.black,
-      onSecondary: AppColors.background,
       error: AppColors.errorRed,
-      onError: AppColors.black,
       background: AppColors.background,
-      onBackground: AppColors.black,
-      surface: AppColors.background,
-      onSurface: AppColors.black,
+      onBackground: AppColors.onBackground,
     ),
   );
 }

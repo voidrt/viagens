@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
+import 'package:turismo_mobile/theme/text_settings/text.dart';
 
 class IconHeader extends StatelessWidget {
   const IconHeader({super.key});
@@ -10,7 +11,7 @@ class IconHeader extends StatelessWidget {
       children: [
         const Padding(
           padding: EdgeInsets.only(
-            bottom: Paddings.big,
+            bottom: Paddings.small,
           ),
           child: Icon(
             Icons.mode_of_travel_rounded,
@@ -19,12 +20,14 @@ class IconHeader extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(
-            top: Paddings.big,
-            bottom: Paddings.big,
+            bottom: Paddings.bigger,
           ),
           child: Text(
             'Bem-vindo de volta\nSentimos sua falta!',
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Theme.of(context)
+                .textTheme
+                .bodySmall!
+                .copyWith(fontSize: FontSize.defaultTitle),
           ),
         ),
       ],

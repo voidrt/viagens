@@ -18,11 +18,8 @@ class LoginButton extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: const EdgeInsets.all(25),
-        margin: const EdgeInsets.fromLTRB(
-          Paddings.big,
-          Paddings.bigger,
-          Paddings.big,
-          Paddings.kDefault,
+        margin: const EdgeInsets.only(
+          top: Paddings.kDefault,
         ),
         decoration: BoxDecoration(
           color: Colors.black,

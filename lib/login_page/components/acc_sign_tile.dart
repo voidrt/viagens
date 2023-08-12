@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/theme/light_theme/colors.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class AccountAuthTile extends StatelessWidget {
@@ -19,9 +18,9 @@ class AccountAuthTile extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(Paddings.big),
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.background),
+          border: Border.all(color: Colors.white),
           borderRadius: BorderRadius.circular(16),
-          color: Colors.grey[200],
+          color: Theme.of(context).colorScheme.onBackground,
         ),
         child: Image.asset(
           imagePath,
