@@ -3,20 +3,31 @@ import 'package:turismo_mobile/theme/padding/padding.dart';
 import 'package:turismo_mobile/theme/text_settings/text.dart';
 
 class IconHeader extends StatelessWidget {
-  const IconHeader({super.key});
+  const IconHeader({
+    super.key,
+    required this.screenHeight,
+  });
+
+  final double screenHeight;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Padding(
-          padding: EdgeInsets.only(
+        Padding(
+          padding: const EdgeInsets.only(
             top: Paddings.big,
             bottom: Paddings.small,
           ),
-          child: Icon(
-            Icons.mode_of_travel_rounded,
-            size: 100,
+          child: CircleAvatar(
+            radius: screenHeight / 12,
+            backgroundColor: Theme.of(context).colorScheme.shadow,
+            child: Center(
+              child: Image.asset(
+                'assets/images/full-logo.png',
+                scale: 1.04,
+              ),
+            ),
           ),
         ),
         Padding(

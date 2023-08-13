@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/auth/components/acc_login_tile.dart';
-import 'package:turismo_mobile/auth/components/snackbar.dart';
+import 'package:turismo_mobile/interface/auth/components/acc_login_tile.dart';
+import 'package:turismo_mobile/interface/auth/components/snackbar.dart';
 
 class AccLoginRow extends StatelessWidget {
   const AccLoginRow({super.key});

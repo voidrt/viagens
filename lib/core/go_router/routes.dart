@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:turismo_mobile/auth/screens/login_screen.dart';
-import 'package:turismo_mobile/user/screens/user_profile.dart';
+import 'package:turismo_mobile/interface/auth/screens/login_screen.dart';
+import 'package:turismo_mobile/interface/user/screens/user_profile.dart';
 
 class Routes {
   static GoRouter appRoutes = GoRouter(

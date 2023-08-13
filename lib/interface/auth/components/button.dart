@@ -24,7 +24,7 @@ class BoldButton extends StatelessWidget {
           top: Paddings.kDefault,
         ),
         decoration: BoxDecoration(
-          color: backgroundColor ?? Colors.black,
+          color: backgroundColor ?? Theme.of(context).colorScheme.shadow,
           borderRadius: BorderRadius.circular(8),
         ),
         child: Center(

@@ -25,11 +25,13 @@ class AppTextField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
+            borderRadius: const BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
               color: Theme.of(context).colorScheme.background,
             ),
           ),
           focusedBorder: const OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
               color: LightThemeColors.lightGrey,
             ),

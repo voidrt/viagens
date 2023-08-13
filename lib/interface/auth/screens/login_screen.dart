@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/auth/components/page_header.dart';
-import 'package:turismo_mobile/auth/components/layout_column.dart';
+import 'package:turismo_mobile/interface/auth/components/page_header.dart';
+import 'package:turismo_mobile/interface/auth/screens/layout.dart';
 import 'package:turismo_mobile/core/utils/utils.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -25,14 +25,20 @@ class LoginScreen extends StatelessWidget {
           resizeToAvoidBottomInset: false,
           backgroundColor: Colors.transparent,
           body: SafeArea(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const IconHeader(),
-                  LoginScreenLayout(),
-                ],
-              ),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconHeader(
+                        screenHeight: constraints.maxHeight,
+                      ),
+                      LoginScreenLayout(),
+                    ],
+                  ),
+                );
+              },
             ),
           ),
         ),
