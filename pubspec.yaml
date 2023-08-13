@@ -24,3 +24,14 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+    - assets/fonts/
+
+  fonts:
+  - family: Exo
+    fonts:
+      - asset: assets/fonts/Exo-Bold.ttf
+        weight: 700
+      - asset: assets/fonts/Exo-Regular.ttf
+        weight: 300
+      - asset: assets/fonts/Exo-Semibold.ttf
+        weight: 600

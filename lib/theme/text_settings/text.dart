@@ -3,19 +3,22 @@ import 'package:turismo_mobile/theme/light_theme/colors.dart';
 
 class Texts {
   static const TextStyle bodySmall = TextStyle(
-    color: AppColors.textColor,
+    color: LightThemeColors.textColor,
     fontSize: FontSize.defaultBody,
     fontWeight: FontWeight.w300,
+    fontFamily: 'Exo',
   );
   static const TextStyle titleMedium = TextStyle(
-    color: AppColors.textColor,
+    color: LightThemeColors.textColor,
     fontSize: FontSize.big,
     fontWeight: FontWeight.w500,
+    fontFamily: 'Exo',
   );
   static const TextStyle titleLarge = TextStyle(
-    color: AppColors.textColor,
+    color: LightThemeColors.textColor,
     fontSize: FontSize.bigger,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w800,
+    fontFamily: 'Exo',
   );
 }
 

@@ -11,6 +11,7 @@ class IconHeader extends StatelessWidget {
       children: [
         const Padding(
           padding: EdgeInsets.only(
+            top: Paddings.big,
             bottom: Paddings.small,
           ),
           child: Icon(
@@ -20,7 +21,7 @@ class IconHeader extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(
-            bottom: Paddings.bigger,
+            bottom: Paddings.big,
           ),
           child: Text(
             'Bem-vindo de volta!\nSentimos sua falta...',

@@ -6,7 +6,8 @@ class LightTheme {
   static ThemeData lightThemeSettings = ThemeData(
     useMaterial3: true,
     //? TEXT THEME
-    fontFamily: 'Montserrat',
+    fontFamily: 'Exo',
+
     textTheme: const TextTheme().copyWith(
       bodySmall: Texts.bodySmall,
       displayMedium: Texts.titleMedium,
@@ -14,14 +15,16 @@ class LightTheme {
     ),
     //? COLORS
     unselectedWidgetColor: Colors.white.withOpacity(0.67),
+
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
+      seedColor: LightThemeColors.primary,
       brightness: Brightness.light,
-      primary: AppColors.primary,
-      secondary: AppColors.black,
-      error: AppColors.errorRed,
-      background: AppColors.background,
-      onBackground: AppColors.onBackground,
+      primary: LightThemeColors.primary,
+      secondary: LightThemeColors.secondary,
+      error: LightThemeColors.errorRed,
+      background: LightThemeColors.background,
+      onBackground: LightThemeColors.onBackground,
+      shadow: LightThemeColors.black,
     ),
   );
 }

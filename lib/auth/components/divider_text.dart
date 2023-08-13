@@ -22,7 +22,9 @@ class DividerText extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Text(
               'Ou continue com:',
-              style: TextStyle(color: Colors.grey[700]),
+              style: TextStyle(
+                color: Colors.grey[700],
+              ),
             ),
           ),
           Expanded(

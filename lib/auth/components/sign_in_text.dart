@@ -11,13 +11,15 @@ class CreateAccountText extends StatelessWidget {
       children: [
         Text(
           'Nao eh registrado?',
-          style: TextStyle(color: Colors.grey[700]),
+          style: TextStyle(
+            color: Colors.grey[700],
+          ),
         ),
         const SizedBox(width: 4),
         const Text(
           'Registre-se agora',
           style: TextStyle(
-            color: AppColors.primary,
+            color: LightThemeColors.primary,
             fontWeight: FontWeight.bold,
           ),
         ),

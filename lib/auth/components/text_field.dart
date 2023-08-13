@@ -31,14 +31,14 @@ class AppTextField extends StatelessWidget {
           ),
           focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(
-              color: AppColors.lightGrey,
+              color: LightThemeColors.lightGrey,
             ),
           ),
           fillColor: Theme.of(context).colorScheme.onBackground,
           filled: true,
           hintText: hintText,
           hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
-                color: AppColors.black.withOpacity(0.5),
+                color: LightThemeColors.black.withOpacity(0.5),
               ),
         ),
       ),
