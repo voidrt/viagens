@@ -34,7 +34,7 @@ class UserProfile extends StatelessWidget {
               children: [
                 UserIcon(
                   screenHeight: constraints.maxHeight,
-                  image: 'assets/images/apple.png',
+                  image: 'assets/images/github.png',
                 ),
               ],
             ),

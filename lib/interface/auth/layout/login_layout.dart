@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
-import 'package:turismo_mobile/interface/auth/components/forgot_password.dart';
-import 'package:turismo_mobile/interface/auth/components/acc_login_row.dart';
-import 'package:turismo_mobile/interface/auth/components/divider_text.dart';
-import 'package:turismo_mobile/interface/auth/components/button.dart';
-import 'package:turismo_mobile/interface/auth/components/sign_in_text.dart';
 import 'package:turismo_mobile/interface/auth/components/text_field.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
@@ -13,8 +7,8 @@ class LoginScreenLayout extends StatelessWidget {
     super.key,
   });
 
-  final usernameController = TextEditingController();
-  final passwordController = TextEditingController();
+  final userEmail = TextEditingController();
+  final password = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -36,19 +30,21 @@ class LoginScreenLayout extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               AppTextField(
-                controller: usernameController,
+                controller: userEmail,
                 hintText: 'Usuario',
                 obscureText: false,
               ),
               AppTextField(
-                controller: passwordController,
+                controller: password,
                 hintText: 'Senha',
                 obscureText: true,
               ),
               const ForgotPassword(),
               BoldButton(
                 text: 'Entrar',
-                onTap: () => context.goNamed('user-profile'),
+                onTap: () {
+                  AuthenticationService().emailSignIn(userEmail, password);
+                },
               ),
               const DividerText(),
               const AccLoginRow(),

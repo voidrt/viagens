@@ -13,18 +13,14 @@ class UserIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double userIconHeight = screenHeight / 10;
+    final double userIconHeight = screenHeight / 13;
 
     return Container(
       margin: const EdgeInsets.all(Paddings.kDefault),
       child: CircleAvatar(
+        backgroundColor: Theme.of(context).colorScheme.background,
+        foregroundImage: AssetImage(image),
         radius: userIconHeight,
-        backgroundColor: Theme.of(context).colorScheme.shadow,
-        child: CircleAvatar(
-          backgroundColor: Theme.of(context).colorScheme.background,
-          backgroundImage: AssetImage(image),
-          radius: userIconHeight - 3,
-        ),
       ),
     );
   }

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "30482096287",
+    "project_id": "viagens-rt",
+    "storage_bucket": "viagens-rt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30482096287:android:af0ad0f5069a96ee6bc2aa",
+        "android_client_info": {
+          "package_name": "com.example.turismo_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30482096287-eepvlm8rqk4c0f2d7ki5669lfq4crr68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOJqjeLBZIcPE-n6cwMdJKiTlUcQsLMxM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30482096287-eepvlm8rqk4c0f2d7ki5669lfq4crr68.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "30482096287-vhu8ltkre79ikvqq0a9b258iblomemfu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.turismoMobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
