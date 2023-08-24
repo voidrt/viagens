@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/interface/auth/screens/login_screen.dart';
-import 'package:turismo_mobile/interface/home/layout.dart';
+import 'package:turismo_mobile/interface/auth/login_screen.dart';
+import 'package:turismo_mobile/interface/home/layout/home_layout.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
