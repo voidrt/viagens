@@ -7,8 +7,10 @@ class AuthenticationService {
   }
 
   void emailSignIn(email, password) async {
-    await FirebaseAuth.instance
-        .signInWithEmailAndPassword(email: email, password: password);
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    );
   }
 
   googleSignIn() async {

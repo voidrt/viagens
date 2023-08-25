@@ -27,15 +27,18 @@ class LoginScreen extends StatelessWidget {
           body: SafeArea(
             child: LayoutBuilder(
               builder: (context, constraints) {
-                return Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconHeader(
-                        screenHeight: constraints.maxHeight,
-                      ),
-                      LoginScreenLayout(),
-                    ],
+                return SingleChildScrollView(
+                  physics: const NeverScrollableScrollPhysics(),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        IconHeader(
+                          screenHeight: constraints.maxHeight,
+                        ),
+                        LoginScreenLayout(),
+                      ],
+                    ),
                   ),
                 );
               },
