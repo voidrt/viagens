@@ -33,7 +33,7 @@ class LoginScreen extends StatelessWidget {
                       IconHeader(
                         screenHeight: constraints.maxHeight,
                       ),
-                      LoginScreenLayout(),
+                      const LoginScreenLayout(),
                     ],
                   ),
                 );

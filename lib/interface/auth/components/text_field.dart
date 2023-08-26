@@ -2,17 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:turismo_mobile/theme/light_theme/colors.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
-class AppTextField extends StatelessWidget {
-  const AppTextField({
+class AppTextField extends StatefulWidget {
+  const AppTextField(
+    this._controller, {
     super.key,
-    required this.controller,
     required this.hintText,
     required this.obscureText,
   });
 
-  final TextEditingController controller;
+  final TextEditingController _controller;
   final String hintText;
   final bool obscureText;
+
+  @override
+  State<AppTextField> createState() => _AppTextFieldState();
+}
+
+class _AppTextFieldState extends State<AppTextField> {
+  @override
+  void dispose() {
+    widget._controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,12 +32,12 @@ class AppTextField extends StatelessWidget {
         vertical: Paddings.small / 2,
       ),
       child: TextField(
-        controller: controller,
-        obscureText: obscureText,
+        controller: widget._controller,
+        obscureText: widget.obscureText,
         decoration: InputDecoration(
           fillColor: Theme.of(context).colorScheme.onBackground,
           filled: true,
-          hintText: hintText,
+          hintText: widget.hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
