@@ -2,11 +2,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthenticationService {
-  void signUserOut() async {
-    await FirebaseAuth.instance.signOut();
+  void logOut() {
+    FirebaseAuth.instance.signOut();
   }
 
-  void emailSignIn(email, password) async {
+  void emailSignIn({email, password}) async {
     await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email,
       password: password,

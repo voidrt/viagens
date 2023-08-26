@@ -1,0 +1,182 @@
+{
+  "id": "itinerary-123",
+  "destination": "Chapada dos Veadeiros, GO, Brazil",
+  "days": [
+    {
+      "day": 1,
+      "date": "2023-08-28",
+      "places": [
+        {
+          "name": "Cachoeira Almécegas",
+          "supplier": "Chapada Tours",
+          "title": "Cachoeira Almécegas Adventure",
+          "perex": "Discover the beauty of Cachoeira Almécegas with its twin waterfalls and lush landscapes.",
+          "url": "https://example.com/cachoeira-almecegas",
+          "rating": 4.9,
+          "review_count": 120,
+          "photo_url": "https://cdn.example.com/photos/cachoeira-almecegas.jpg",
+          "price": 90,
+          "original_price": 110,
+          "duration": "4 hours",
+          "duration_min": 14400,
+          "duration_max": 14400,
+          "flags": ["bestseller", "instant_confirmation"],
+          "tags": ["nature", "adventure"],
+          "latitude": -13.837174,
+          "longitude": -47.705202
+        },
+        {
+          "name": "Vale da Lua",
+          "supplier": "Chapada Tours",
+          "title": "Vale da Lua Exploration",
+          "perex": "Experience the unique rock formations and natural pools at the Vale da Lua, a fascinating lunar landscape.",
+          "url": "https://example.com/vale-da-lua",
+          "rating": 4.7,
+          "review_count": 105,
+          "photo_url": "https://cdn.example.com/photos/vale-da-lua.jpg",
+          "price": 70,
+          "original_price": 90,
+          "duration": "3 hours",
+          "duration_min": 10800,
+          "duration_max": 10800,
+          "flags": ["instant_confirmation"],
+          "tags": ["exploration", "geology"],
+          "latitude": -14.181622,
+          "longitude": -47.754897
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2023-08-29",
+      "places": [
+        {
+          "name": "Catarata dos Couros",
+          "supplier": "Chapada Tours",
+          "title": "Catarata dos Couros Expedition",
+          "perex": "Embark on a thrilling journey to the powerful Catarata dos Couros waterfalls and be amazed by the cascades.",
+          "url": "https://example.com/catarata-dos-couros",
+          "rating": 4.6,
+          "review_count": 80,
+          "photo_url": "https://cdn.example.com/photos/catarata-dos-couros.jpg",
+          "price": 130,
+          "original_price": 160,
+          "duration": "6 hours",
+          "duration_min": 21600,
+          "duration_max": 21600,
+          "flags": ["instant_confirmation"],
+          "tags": ["adventure", "sightseeing"],
+          "latitude": -13.865313,
+          "longitude": -47.719632
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2023-08-30",
+      "places": [
+        {
+          "name": "Cachoeira Loquinhas",
+          "supplier": "Chapada Tours",
+          "title": "Cachoeira Loquinhas Getaway",
+          "perex": "Relax and unwind at Cachoeira Loquinhas, a series of clear pools and waterfalls nestled in nature.",
+          "url": "https://example.com/cachoeira-loquinhas",
+          "rating": 4.7,
+          "review_count": 110,
+          "photo_url": "https://cdn.example.com/photos/cachoeira-loquinhas.jpg",
+          "price": 85,
+          "original_price": 100,
+          "duration": "4 hours",
+          "duration_min": 14400,
+          "duration_max": 14400,
+          "flags": ["bestseller", "instant_confirmation"],
+          "tags": ["nature", "relaxation"],
+          "latitude": -14.125481,
+          "longitude": -47.470014
+        },
+        {
+          "name": "Mirante da Janela",
+          "supplier": "Chapada Tours",
+          "title": "Mirante da Janela Adventure",
+          "perex": "Hike to the Mirante da Janela viewpoint and be rewarded with breathtaking panoramic views of the landscape.",
+          "url": "https://example.com/mirante-da-janela",
+          "rating": 4.9,
+          "review_count": 95,
+          "photo_url": "https://cdn.example.com/photos/mirante-da-janela.jpg",
+          "price": 75,
+          "original_price": 90,
+          "duration": "5 hours",
+          "duration_min": 18000,
+          "duration_max": 18000,
+          "flags": ["instant_confirmation"],
+          "tags": ["hiking", "viewpoint"],
+          "latitude": -14.174349,
+          "longitude": -47.751302
+        },
+        {
+          "name": "Cachoeira Santa Bárbara",
+          "supplier": "Chapada Tours",
+          "title": "Cachoeira Santa Bárbara Paradise",
+          "perex": "Dive into the crystal-clear waters of Cachoeira Santa Bárbara and enjoy the surrounding lush nature.",
+          "url": "https://example.com/cachoeira-santa-barbara",
+          "rating": 4.8,
+          "review_count": 95,
+          "photo_url": "https://cdn.example.com/photos/cachoeira-santa-barbara.jpg",
+          "price": 110,
+          "original_price": 130,
+          "duration": "5 hours",
+          "duration_min": 18000,
+          "duration_max": 18000,
+          "flags": ["bestseller", "instant_confirmation"],
+          "tags": ["nature", "swimming"],
+          "latitude": -13.765871,
+          "longitude": -47.592684
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2023-08-31",
+      "places": [
+        {
+          "name": "Cachoeira dos Cristais",
+          "supplier": "Chapada Tours",
+          "title": "Cachoeira dos Cristais Retreat",
+          "perex": "Indulge in the tranquility of Cachoeira dos Cristais, a place of crystal-clear waters and serene surroundings.",
+          "url": "https://example.com/cachoeira-dos-cristais",
+          "rating": 4.8,
+          "review_count": 100,
+          "photo_url": "https://cdn.example.com/photos/cachoeira-dos-cristais.jpg",
+          "price": 95,
+          "original_price": 110,
+          "duration": "4 hours",
+          "duration_min": 14400,
+          "duration_max": 14400,
+          "flags": ["bestseller", "instant_confirmation"],
+          "tags": ["nature", "relaxation"],
+          "latitude": -14.142891,
+          "longitude": -47.544567
+        },
+        {
+          "name": "Jardim de Maytrea",
+          "supplier": "Chapada Tours",
+          "title": "Jardim de Maytrea Art Exploration",
+          "perex": "Conclude your trip by exploring the mystical Jardim de Maytrea, an otherworldly garden with unique sculptures and art.",
+          "url": "https://example.com/jardim-de-maytrea",
+          "rating": 4.6,
+          "review_count": 90,
+          "photo_url": "https://cdn.example.com/photos/jardim-de-maytrea.jpg",
+          "price": 80,
+          "original_price": 100,
+          "duration": "3 hours",
+          "duration_min": 10800,
+          "duration_max": 10800,
+          "flags": ["instant_confirmation"],
+          "tags": ["exploration", "art"],
+          "latitude": -14.125022,
+          "longitude": -47.515678
+        }
+      ]
+    }
+  ]
+}

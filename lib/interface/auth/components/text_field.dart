@@ -24,6 +24,9 @@ class AppTextField extends StatelessWidget {
         controller: controller,
         obscureText: obscureText,
         decoration: InputDecoration(
+          fillColor: Theme.of(context).colorScheme.onBackground,
+          filled: true,
+          hintText: hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(15)),
             borderSide: BorderSide(
@@ -36,9 +39,6 @@ class AppTextField extends StatelessWidget {
               color: LightThemeColors.lightGrey,
             ),
           ),
-          fillColor: Theme.of(context).colorScheme.onBackground,
-          filled: true,
-          hintText: hintText,
           hintStyle: Theme.of(context).textTheme.bodySmall!.copyWith(
                 color: LightThemeColors.black.withOpacity(0.5),
               ),

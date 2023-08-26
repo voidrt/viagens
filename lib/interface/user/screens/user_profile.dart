@@ -20,7 +20,7 @@ class UserProfile extends StatelessWidget {
           ),
           leading: IconButton(
             onPressed: () {
-              context.goNamed('login');
+              context.goNamed('home');
             },
             icon: Icon(
               Icons.arrow_back,
