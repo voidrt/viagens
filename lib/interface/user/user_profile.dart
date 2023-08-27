@@ -1,16 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/interface/auth/login_screen.dart';
-import 'package:turismo_mobile/interface/home/layout/home_layout.dart';
+import 'package:turismo_mobile/interface/user/layout/user_layout.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class UserProfileScreen extends StatefulWidget {
+  const UserProfileScreen({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<UserProfileScreen> createState() => _UserProfileScreenState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _UserProfileScreenState extends State<UserProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
       body: StreamBuilder<User?>(
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
-          return snapshot.hasData ? const HomeLayout() : const LoginScreen();
+          return snapshot.hasData ? const UserLayout() : const LoginScreen();
         },
       ),
     );

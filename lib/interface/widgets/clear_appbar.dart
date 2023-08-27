@@ -1,0 +1,76 @@
+import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+
+class UserAppBar extends StatelessWidget {
+  const UserAppBar({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final ColorScheme colors = Theme.of(context).colorScheme;
+
+    return AppBar(
+      backgroundColor: colors.shadow,
+      elevation: 0,
+      centerTitle: true,
+      title: Text(
+        'Profile',
+        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+              color: Theme.of(context).colorScheme.background,
+            ),
+      ),
+      leading: IconButton(
+        onPressed: () {
+          context.pop();
+        },
+        icon: Icon(
+          Icons.arrow_back,
+          color: Theme.of(context).colorScheme.background,
+        ),
+      ),
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(1.0),
+        child: Container(
+          color: colors.shadow,
+          height: 1.0,
+        ),
+      ),
+    );
+  }
+}
+
+class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const ClearAppBar({
+    super.key,
+    required this.appBar,
+    this.widgets,
+    this.title,
+    this.leading,
+  });
+
+  final AppBar appBar;
+  final List<Widget>? widgets;
+  final Text? title;
+  final Widget? leading;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      leading: leading,
+      title: title,
+      actions: widgets,
+      elevation: 0,
+      centerTitle: true,
+      backgroundColor: Theme.of(context).colorScheme.background,
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(1.0),
+        child: Container(
+          color: Theme.of(context).colorScheme.shadow.withOpacity(0.6),
+          height: 1.4,
+        ),
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => Size.fromHeight(appBar.preferredSize.height);
+}
