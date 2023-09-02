@@ -1,7 +1,7 @@
 import 'package:turismo_mobile/core/models/itinerary/itinerary_day_model.dart';
 
-class TravelItineraryModel {
-  const TravelItineraryModel({
+class ItineraryModel {
+  const ItineraryModel({
     required this.id,
     required this.destination,
     required this.days,
@@ -11,8 +11,8 @@ class TravelItineraryModel {
   final String destination;
   final List<ItineraryDayModel> days;
 
-  factory TravelItineraryModel.fromJson(Map<String, dynamic> json) {
-    return TravelItineraryModel(
+  factory ItineraryModel.fromJson(Map<String, dynamic> json) {
+    return ItineraryModel(
       id: json['id'],
       destination: json['destination'],
       days: json['days'],

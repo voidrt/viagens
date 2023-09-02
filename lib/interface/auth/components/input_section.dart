@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/core/repository/authentication.dart';
+import 'package:turismo_mobile/core/repository/authentication/authentication.dart';
 import 'package:turismo_mobile/interface/auth/components/button.dart';
 import 'package:turismo_mobile/interface/auth/components/forgot_password.dart';
 import 'package:turismo_mobile/interface/auth/components/text_field.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class UserAppBar extends StatelessWidget {
   const UserAppBar({super.key});
@@ -48,6 +49,7 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   final AppBar appBar;
+
   final List<Widget>? widgets;
   final Text? title;
   final Widget? leading;
@@ -55,9 +57,17 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: leading,
+      leading: Padding(
+        padding: const EdgeInsets.only(left: Paddings.kDefault),
+        child: leading,
+      ),
       title: title,
-      actions: widgets,
+      actions: [
+        ...widgets ?? [],
+        const SizedBox(
+          width: Paddings.kDefault,
+        )
+      ],
       elevation: 0,
       centerTitle: true,
       backgroundColor: Theme.of(context).colorScheme.background,

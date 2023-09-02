@@ -19,6 +19,7 @@ dependencies:
   firebase_core: ^2.15.1
   firebase_auth: ^4.8.0
   line_icons: ^2.0.3
+  flutter_riverpod: ^2.3.10
 
 dev_dependencies:
   flutter_test:
