@@ -1,5 +1,5 @@
-class ItineraryPlaceModel {
-  ItineraryPlaceModel({
+class ItineraryTripModel {
+  ItineraryTripModel({
     required this.name,
     required this.supplier,
     required this.title,
@@ -39,8 +39,8 @@ class ItineraryPlaceModel {
   final List<String> flags;
   final List<String> tags;
 
-  factory ItineraryPlaceModel.fromJson(Map<String, dynamic> itineraryPlace) {
-    return ItineraryPlaceModel(
+  factory ItineraryTripModel.fromJson(Map<String, dynamic> itineraryPlace) {
+    return ItineraryTripModel(
       name: itineraryPlace['name'],
       supplier: itineraryPlace['supplier'],
       title: itineraryPlace['title'],

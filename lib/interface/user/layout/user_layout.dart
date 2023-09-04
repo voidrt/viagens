@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/repository/authentication/authentication.dart';
-import 'package:turismo_mobile/interface/auth/components/button.dart';
+import 'package:turismo_mobile/interface/widgets/button.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 import 'package:turismo_mobile/interface/user/components/user_icon.dart';
 

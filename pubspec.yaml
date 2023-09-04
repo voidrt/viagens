@@ -21,7 +21,8 @@ dependencies:
   line_icons: ^2.0.3
   flutter_riverpod: ^2.3.10
   http: ^1.1.0
-
+  intl:
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,7 +1,7 @@
-import 'package:turismo_mobile/core/models/itinerary/itinerary_place.dart';
+import 'package:turismo_mobile/core/models/itinerary/trip.dart';
 
-class ItineraryDayModel {
-  ItineraryDayModel({
+class TripDayModel {
+  TripDayModel({
     required this.dayOrder,
     required this.date,
     required this.placesList,
@@ -9,15 +9,15 @@ class ItineraryDayModel {
 
   final int dayOrder;
   final String date;
-  final List<ItineraryPlaceModel> placesList;
+  final List<ItineraryTripModel> placesList;
 
-  factory ItineraryDayModel.fromJson(Map<String, dynamic> jsonDay) {
-    return ItineraryDayModel(
+  factory TripDayModel.fromJson(Map<String, dynamic> jsonDay) {
+    return TripDayModel(
       dayOrder: jsonDay['day'],
       date: jsonDay['date'],
       placesList: List.generate(
         jsonDay['places'].length,
-        (index) => ItineraryPlaceModel.fromJson(
+        (index) => ItineraryTripModel.fromJson(
           jsonDay['places'](index),
         ),
       ),

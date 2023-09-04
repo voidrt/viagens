@@ -5,7 +5,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/repository/providers/itinerary_providers.dart';
 import 'package:turismo_mobile/interface/home/components/add_itinerary_text.dart';
-import 'package:turismo_mobile/interface/home/components/itinerary_tile.dart';
+import 'package:turismo_mobile/interface/home/layout/available_travel.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 
 class HomeLayout extends ConsumerWidget {
@@ -18,7 +18,7 @@ class HomeLayout extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final ColorScheme colors = Theme.of(context).colorScheme;
-    final AsyncValue<ItineraryModel> itineraries =
+    final AsyncValue<List<ItineraryModel>> userTrips =
         ref.watch(itineraryListProvider);
 
     return Scaffold(
@@ -42,21 +42,27 @@ class HomeLayout extends ConsumerWidget {
           },
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _createItinerary,
+        tooltip: 'Adicionar itinerario',
+        backgroundColor: colors.primary,
+        foregroundColor: colors.shadow,
+        elevation: 4,
+        child: const Icon(Icons.add),
+      ),
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
-            return itineraries.when(
+            return userTrips.when(
               data: (data) {
                 return Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Visibility(
-                      visible: true,
-                      child: AddItineraryText(
-                        colors: colors,
-                      ),
-                    ),
-                    ItineraryTile(item: data),
+                    data.isEmpty
+                        ? AddItineraryText(colors: colors)
+                        : AvailableTravels(
+                            trips: data,
+                            constraints: constraints,
+                          ),
                   ],
                 );
               },
@@ -84,13 +90,6 @@ class HomeLayout extends ConsumerWidget {
             );
           },
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _createItinerary,
-        tooltip: 'Adicionar itinerario',
-        backgroundColor: colors.primary,
-        foregroundColor: colors.shadow,
-        child: const Icon(Icons.add),
       ),
     );
   }
