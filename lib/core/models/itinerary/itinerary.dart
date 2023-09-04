@@ -15,7 +15,12 @@ class ItineraryModel {
     return ItineraryModel(
       id: json['id'],
       destination: json['destination'],
-      days: json['days'],
+      days: List.generate(
+        json['days'].length,
+        (index) => ItineraryDayModel.fromJson(
+          json['days'](index),
+        ),
+      ),
     );
   }
 }

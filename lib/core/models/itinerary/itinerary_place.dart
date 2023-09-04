@@ -38,4 +38,26 @@ class ItineraryPlaceModel {
 
   final List<String> flags;
   final List<String> tags;
+
+  factory ItineraryPlaceModel.fromJson(Map<String, dynamic> itineraryPlace) {
+    return ItineraryPlaceModel(
+      name: itineraryPlace['name'],
+      supplier: itineraryPlace['supplier'],
+      title: itineraryPlace['title'],
+      perex: itineraryPlace['perex'],
+      url: itineraryPlace['url'],
+      rating: itineraryPlace['rating'],
+      reviewCount: itineraryPlace['reviewCount'],
+      photoUrl: itineraryPlace['photoUrl'],
+      price: itineraryPlace['price'],
+      originalPrice: itineraryPlace['originalPrice'],
+      duration: itineraryPlace['duration'],
+      minDuration: itineraryPlace['minDuration'],
+      maxDuration: itineraryPlace['maxDuration'],
+      flags: itineraryPlace['flags'],
+      tags: itineraryPlace['tags'],
+      latitude: itineraryPlace['latitude'],
+      longitude: itineraryPlace['longitude'],
+    );
+  }
 }

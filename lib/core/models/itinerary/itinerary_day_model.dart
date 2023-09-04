@@ -10,4 +10,17 @@ class ItineraryDayModel {
   final int dayOrder;
   final String date;
   final List<ItineraryPlaceModel> placesList;
+
+  factory ItineraryDayModel.fromJson(Map<String, dynamic> jsonDay) {
+    return ItineraryDayModel(
+      dayOrder: jsonDay['day'],
+      date: jsonDay['date'],
+      placesList: List.generate(
+        jsonDay['places'].length,
+        (index) => ItineraryPlaceModel.fromJson(
+          jsonDay['places'](index),
+        ),
+      ),
+    );
+  }
 }

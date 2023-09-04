@@ -2,6 +2,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/repository/providers/itinerary_providers.dart';
 import 'package:turismo_mobile/interface/home/components/add_itinerary_text.dart';
 import 'package:turismo_mobile/interface/home/components/itinerary_tile.dart';
@@ -17,7 +18,8 @@ class HomeLayout extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final ColorScheme colors = Theme.of(context).colorScheme;
-    final userItineraries = ref.watch(userItinerariesProvider);
+    final AsyncValue<ItineraryModel> itineraries =
+        ref.watch(itineraryListProvider);
 
     return Scaffold(
       appBar: ClearAppBar(
@@ -43,21 +45,42 @@ class HomeLayout extends ConsumerWidget {
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constraints) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Visibility(
-                  visible: userItineraries.isEmpty,
-                  child: AddItineraryText(
-                    colors: colors,
+            return itineraries.when(
+              data: (data) {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Visibility(
+                      visible: true,
+                      child: AddItineraryText(
+                        colors: colors,
+                      ),
+                    ),
+                    ItineraryTile(item: data),
+                  ],
+                );
+              },
+              error: (error, stackTrace) {
+                return Scaffold(
+                  body: Column(
+                    children: [
+                      Text(
+                        error.toString(),
+                      ),
+                      Text(
+                        stackTrace.toString(),
+                      ),
+                    ],
                   ),
-                ),
-                ...userItineraries
-                    .map(
-                      (itinerary) => ItineraryTile(item: itinerary),
-                    )
-                    .toList(),
-              ],
+                );
+              },
+              loading: () {
+                return Center(
+                  child: CircularProgressIndicator(
+                    color: colors.secondary,
+                  ),
+                );
+              },
             );
           },
         ),
