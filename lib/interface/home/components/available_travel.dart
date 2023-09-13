@@ -21,14 +21,17 @@ class AvailableTravels extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.fromLTRB(
-            Paddings.big - 5,
+            Paddings.big,
             Paddings.kDefault,
             0,
             0,
           ),
           child: Text(
             'Viagens',
-            style: Theme.of(context).textTheme.titleLarge,
+            style: Theme.of(context)
+                .textTheme
+                .titleLarge!
+                .copyWith(fontWeight: FontWeight.w600),
           ),
         ),
         ...List.generate(

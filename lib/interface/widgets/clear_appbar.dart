@@ -70,7 +70,7 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
       ],
       elevation: 0,
       centerTitle: true,
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.shadow,
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1.0),
         child: Container(

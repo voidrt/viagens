@@ -25,18 +25,21 @@ class ItineraryTile extends StatelessWidget {
     return Container(
       height: height,
       width: width,
-      margin: const EdgeInsets.all(Paddings.big - 5),
+      margin: const EdgeInsets.symmetric(
+        vertical: Paddings.big - 10,
+        horizontal: Paddings.big - 5,
+      ),
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(
-          Radius.circular(20),
+          Radius.circular(25),
         ),
         color: colors.onBackground,
         boxShadow: [
           BoxShadow(
             color: colors.shadow.withOpacity(0.2),
             spreadRadius: 0,
-            blurRadius: 10,
-            offset: const Offset(0, 6), // changes position of shadow
+            blurRadius: 3,
+            offset: const Offset(0, 2), // changes position of shadow
           ),
         ],
       ),

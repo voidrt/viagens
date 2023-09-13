@@ -23,15 +23,15 @@ class TileImage extends StatelessWidget {
           Container(
             foregroundDecoration: BoxDecoration(
               borderRadius: const BorderRadius.all(
-                Radius.circular(20),
+                Radius.circular(13),
               ),
               gradient: LinearGradient(
                 colors: [
-                  Colors.black.withOpacity(0.8),
-                  Colors.black.withOpacity(0.3),
+                  Colors.black12.withOpacity(0.5),
+                  Colors.black12.withOpacity(0.2),
                 ],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
+                begin: Alignment.topCenter,
+                end: Alignment.bottomRight,
               ),
             ),
             decoration: const BoxDecoration(
@@ -42,7 +42,7 @@ class TileImage extends StatelessWidget {
                 ),
               ),
               borderRadius: BorderRadius.all(
-                Radius.circular(20),
+                Radius.circular(13),
               ),
             ),
           ),

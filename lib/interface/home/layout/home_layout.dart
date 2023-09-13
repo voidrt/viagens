@@ -5,7 +5,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/repository/providers/itinerary_providers.dart';
 import 'package:turismo_mobile/interface/home/components/add_itinerary_text.dart';
-import 'package:turismo_mobile/interface/home/layout/available_travel.dart';
+import 'package:turismo_mobile/interface/home/components/available_travel.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 
 class HomeLayout extends ConsumerWidget {
@@ -24,19 +24,20 @@ class HomeLayout extends ConsumerWidget {
     return Scaffold(
       appBar: ClearAppBar(
         appBar: AppBar(),
-        widgets: const [
+        widgets: [
           Icon(
             LineIcons.bell,
             size: 30,
+            color: colors.onBackground,
           ),
         ],
         leading: IconButton(
           icon: Icon(
             LineIcons.userCircleAlt,
-            size: 35,
-            color: colors.shadow,
+            size: 33,
+            color: colors.onBackground,
           ),
-          color: colors.shadow,
+          color: colors.shadow.withAlpha(200),
           onPressed: () {
             context.goNamed('user-profile');
           },
