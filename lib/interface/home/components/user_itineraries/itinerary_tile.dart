@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
-import 'package:turismo_mobile/interface/home/components/tile_image.dart';
+import 'package:turismo_mobile/interface/home/components/user_itineraries/tile_image.dart';
 import 'package:turismo_mobile/interface/widgets/button.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
@@ -23,11 +23,11 @@ class ItineraryTile extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return Container(
-      height: height,
+      height: height / 3,
       width: width,
       margin: const EdgeInsets.symmetric(
         vertical: Paddings.big - 10,
-        horizontal: Paddings.big - 5,
+        horizontal: Paddings.big,
       ),
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(

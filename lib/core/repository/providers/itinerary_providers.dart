@@ -1,7 +1,6 @@
 // ignore_for_file: unused_local_variable
 
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:turismo_mobile/core/api/urls.dart';
@@ -21,7 +20,39 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
       return [
         ItineraryModel(
           id: '1',
-          destination: 'Bueno Brandao, MG',
+          destination: ['Bueno Brandao', 'MG'],
+          image:
+              'https://upload.wikimedia.org/wikipedia/commons/1/1b/Bueno_Brand%C3%A3o.JPG',
+          dateRange: DateTimeRange(
+            start: DateTime.parse("2023-01-01"),
+            end: DateTime.parse("2023-01-10"),
+          ),
+          days: [
+            TripDayModel(
+              dayOrder: 1,
+              date: '01/01/2023',
+              placesList: [],
+            ),
+          ],
+        ),
+        ItineraryModel(
+          id: '2',
+          destination: ['Pratapolis', 'MG'],
+          dateRange: DateTimeRange(
+            start: DateTime.parse("2023-01-01"),
+            end: DateTime.parse("2023-01-10"),
+          ),
+          days: [
+            TripDayModel(
+              dayOrder: 1,
+              date: '01/01/2023',
+              placesList: [],
+            ),
+          ],
+        ),
+        ItineraryModel(
+          id: '3',
+          destination: ['Pratapolis', 'MG'],
           dateRange: DateTimeRange(
             start: DateTime.parse("2023-01-01"),
             end: DateTime.parse("2023-01-10"),
