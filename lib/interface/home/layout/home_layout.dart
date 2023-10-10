@@ -4,8 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/repository/providers/itinerary_providers.dart';
-import 'package:turismo_mobile/core/repository/providers/recommended_travels.dart';
-import 'package:turismo_mobile/interface/home/components/recommended/recommended_trips_row.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/add_itinerary_text.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/available_travels.dart';
 
@@ -22,8 +20,6 @@ class HomeLayout extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final AsyncValue<List<ItineraryModel>> userTrips =
         ref.watch(itineraryListProvider);
-    final List<ItineraryModel> recommendedTrips =
-        ref.watch(recommendedTripsProvider);
 
     final ColorScheme colors = Theme.of(context).colorScheme;
 
@@ -65,10 +61,6 @@ class HomeLayout extends ConsumerWidget {
                 return SingleChildScrollView(
                   child: Column(
                     children: [
-                      RecommendedTripsRow(
-                        constraints: constraints,
-                        recommendedTrips: recommendedTrips,
-                      ),
                       data.isEmpty
                           ? AddItineraryText(colors: colors)
                           : AvailableTravels(

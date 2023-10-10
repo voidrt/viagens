@@ -18,6 +18,8 @@ class RecommendedTripsRow extends StatefulWidget {
 }
 
 class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
+  late bool isActive = true;
+
   @override
   Widget build(BuildContext context) {
     final ColorScheme colors = Theme.of(context).colorScheme;
@@ -43,30 +45,38 @@ class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
               ),
             ),
             IconButton(
-              onPressed: () => setState(() {}),
+              onPressed: () => setState(() {
+                isActive = !isActive;
+              }),
               icon: Icon(
-                Icons.keyboard_arrow_up_rounded,
+                isActive
+                    ? Icons.keyboard_arrow_up_rounded
+                    : Icons.keyboard_arrow_down_rounded,
                 color: colors.shadow,
               ),
             ),
           ],
         ),
-        Visibility(
-          visible: false,
-          child: Row(
-            children: [
-              const SizedBox(
-                width: Paddings.big,
+        Padding(
+          padding: const EdgeInsets.only(left: Paddings.big),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Visibility(
+              visible: isActive,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ...List.generate(
+                    widget.recommendedTrips.length,
+                    (index) => TravelRowItem(
+                      trip: widget.recommendedTrips[index],
+                      height: widget.constraints.maxHeight,
+                      width: widget.constraints.maxWidth,
+                    ),
+                  ),
+                ],
               ),
-              ...List.generate(
-                widget.recommendedTrips.length,
-                (index) => TravelRowItem(
-                  trip: widget.recommendedTrips[index],
-                  height: widget.constraints.maxHeight,
-                  width: widget.constraints.maxWidth,
-                ),
-              ),
-            ],
+            ),
           ),
         ),
       ],
