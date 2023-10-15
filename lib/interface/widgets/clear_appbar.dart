@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
@@ -74,8 +76,8 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1.0),
         child: Container(
-          color: Theme.of(context).colorScheme.shadow.withOpacity(0.6),
-          height: 1.4,
+          color: Theme.of(context).colorScheme.shadow,
+          height: 5,
         ),
       ),
     );

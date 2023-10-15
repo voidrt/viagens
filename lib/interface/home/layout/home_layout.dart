@@ -5,7 +5,7 @@ import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/repository/providers/itinerary_providers.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/add_itinerary_text.dart';
-import 'package:turismo_mobile/interface/home/components/user_itineraries/available_travels.dart';
+import 'package:turismo_mobile/interface/home/layout/available_travels.dart';
 
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 

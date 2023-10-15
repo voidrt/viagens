@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
-import 'package:turismo_mobile/theme/text_settings/text.dart';
 
 class TravelRowItem extends StatelessWidget {
   const TravelRowItem({
