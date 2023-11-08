@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
 
 class ItineraryModel {
@@ -11,7 +12,7 @@ class ItineraryModel {
   });
 
   final String id;
-  final List<String> destination;
+  final TripDestination destination;
   final DateTimeRange dateRange;
   final List<TripDayModel> days;
   final String? image;
@@ -19,7 +20,7 @@ class ItineraryModel {
   factory ItineraryModel.fromJson(Map<String, dynamic> json) {
     return ItineraryModel(
       id: json['id'],
-      destination: json['destination'],
+      destination: TripDestination.fromJson(json['destination']),
       dateRange: DateTimeRange(
         start: json['start date'],
         end: json['end date'],

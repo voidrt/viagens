@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:turismo_mobile/interface/auth/login_screen.dart';
+import 'package:turismo_mobile/interface/create_itinerary/place_search/layout/place_search_layout.dart';
 import 'package:turismo_mobile/interface/home/home.dart';
 import 'package:turismo_mobile/interface/user/user_profile.dart';
 
@@ -21,6 +22,11 @@ class Routes {
         name: 'user-profile',
         path: '/user',
         builder: (context, state) => const UserProfileScreen(),
+      ),
+      GoRoute(
+        name: 'create-itinerary',
+        path: '/create',
+        builder: (context, state) => const PlaceSearchLayout(),
       ),
     ],
   );

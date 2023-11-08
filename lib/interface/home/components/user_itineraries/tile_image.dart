@@ -52,12 +52,12 @@ class TileImage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  item.destination[0],
+                  item.destination.destinationName[0],
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: colors.onBackground, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  item.destination[1],
+                  item.destination.destinationName[1],
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: colors.onBackground, fontWeight: FontWeight.bold),
                 ),

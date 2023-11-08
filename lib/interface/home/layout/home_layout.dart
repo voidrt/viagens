@@ -12,10 +12,6 @@ import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 class HomeLayout extends ConsumerWidget {
   const HomeLayout({super.key});
 
-  void _createItinerary() {
-    print('to be finished');
-  }
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final AsyncValue<List<ItineraryModel>> userTrips =
@@ -30,25 +26,25 @@ class HomeLayout extends ConsumerWidget {
           Icon(
             LineIcons.bell,
             size: 30,
-            color: colors.onBackground,
+            color: colors.background,
           ),
         ],
         leading: IconButton(
           icon: Icon(
             LineIcons.userCircleAlt,
             size: 33,
-            color: colors.onBackground,
+            color: colors.background,
           ),
           color: colors.shadow,
           onPressed: () {
-            context.goNamed('user-profile');
+            context.pushNamed('user-profile');
           },
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _createItinerary,
+        onPressed: () => context.pushNamed('create-itinerary'),
         tooltip: 'Adicionar itinerario',
-        backgroundColor: colors.primary,
+        backgroundColor: colors.secondary,
         foregroundColor: colors.background,
         elevation: 4,
         child: const Icon(Icons.add),

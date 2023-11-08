@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/tile_image.dart';
 import 'package:turismo_mobile/interface/widgets/button.dart';
@@ -27,7 +28,7 @@ class ItineraryTile extends StatelessWidget {
       width: width,
       margin: const EdgeInsets.symmetric(
         vertical: Paddings.big - 10,
-        horizontal: Paddings.big,
+        horizontal: Paddings.big + 5,
       ),
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(
@@ -54,11 +55,17 @@ class ItineraryTile extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: Paddings.medium),
                   child: BoldButton(
-                    onTap: () {},
+                    onTap: () => context.pushNamed('create-itinerary'),
                     text: '  Ver o plano  ',
                     backgroundColor: colors.secondary,
                     padding: 15,
                     roundness: 15,
+                    roundBorder: const BorderRadius.only(
+                      topLeft: Radius.circular(5),
+                      topRight: Radius.circular(5),
+                      bottomLeft: Radius.circular(20),
+                      bottomRight: Radius.circular(20),
+                    ),
                   ),
                 ),
                 Padding(

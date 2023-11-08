@@ -6,6 +6,7 @@ import 'package:turismo_mobile/core/repository/authentication/authentication.dar
 import 'package:turismo_mobile/interface/widgets/button.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 import 'package:turismo_mobile/interface/user/components/user_icon.dart';
+import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class UserLayout extends StatelessWidget {
   const UserLayout({super.key});
@@ -15,10 +16,10 @@ class UserLayout extends StatelessWidget {
     return Scaffold(
       appBar: ClearAppBar(
         appBar: AppBar(),
-        title: const Text('User Profile'),
+        title: 'User Profile',
         leading: IconButton(
           icon: const Icon(LineIcons.arrowLeft),
-          onPressed: () => context.goNamed('home'),
+          onPressed: () => context.pop(),
         ),
       ),
       body: LayoutBuilder(
@@ -31,9 +32,13 @@ class UserLayout extends StatelessWidget {
                   image: 'assets/images/github.png',
                 ),
                 Text(FirebaseAuth.instance.currentUser!.email ?? 'Me'),
-                BoldButton(
-                  onTap: () => AuthenticationService().logOut(),
-                  text: 'Sair',
+                Padding(
+                  padding: const EdgeInsets.all(Paddings.bigger),
+                  child: BoldButton(
+                    onTap: () => AuthenticationService().logOut(),
+                    text: 'Sair',
+                    roundBorder: BorderRadius.circular(20),
+                  ),
                 ),
               ],
             ),

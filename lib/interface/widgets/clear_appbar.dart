@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
@@ -45,15 +43,15 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ClearAppBar({
     super.key,
     required this.appBar,
-    this.widgets,
     this.title,
+    this.widgets,
     this.leading,
   });
 
   final AppBar appBar;
 
   final List<Widget>? widgets;
-  final Text? title;
+  final String? title;
   final Widget? leading;
 
   @override
@@ -63,7 +61,9 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
         padding: const EdgeInsets.only(left: Paddings.kDefault),
         child: leading,
       ),
-      title: title,
+      title: Text(
+        title ?? '',
+      ),
       actions: [
         ...widgets ?? [],
         const SizedBox(
@@ -72,6 +72,7 @@ class ClearAppBar extends StatelessWidget implements PreferredSizeWidget {
       ],
       elevation: 0,
       centerTitle: true,
+      foregroundColor: Theme.of(context).colorScheme.background,
       backgroundColor: Theme.of(context).colorScheme.shadow,
       bottom: PreferredSize(
         preferredSize: const Size.fromHeight(1.0),

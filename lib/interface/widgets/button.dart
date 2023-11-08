@@ -6,18 +6,20 @@ class BoldButton extends StatelessWidget {
     super.key,
     required this.onTap,
     required this.text,
+    required this.roundBorder,
     this.backgroundColor,
     this.margin,
     this.padding,
-    this.roundness,
+    this.roundness = 8.0,
   });
 
   final Function onTap;
   final String text;
+  final double roundness;
+  final BorderRadius roundBorder;
   final Color? backgroundColor;
   final double? margin;
   final double? padding;
-  final double? roundness;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +32,7 @@ class BoldButton extends StatelessWidget {
         ),
         decoration: BoxDecoration(
           color: backgroundColor ?? Theme.of(context).colorScheme.shadow,
-          borderRadius: BorderRadius.circular(roundness ?? 8),
+          borderRadius: roundBorder,
         ),
         child: Center(
           child: Text(

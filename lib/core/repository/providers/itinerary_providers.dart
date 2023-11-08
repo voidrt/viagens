@@ -7,6 +7,7 @@ import 'package:turismo_mobile/core/api/urls.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:http/http.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
+import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 
 final FutureProvider<List<ItineraryModel>> itineraryListProvider =
     FutureProvider(
@@ -20,7 +21,8 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
       return [
         ItineraryModel(
           id: '1',
-          destination: ['Bueno Brandao', 'MG'],
+          destination:
+              TripDestination(destinationName: ['Bueno Brandao', 'MG']),
           image:
               'https://upload.wikimedia.org/wikipedia/commons/1/1b/Bueno_Brand%C3%A3o.JPG',
           dateRange: DateTimeRange(
@@ -37,7 +39,7 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
         ),
         ItineraryModel(
           id: '2',
-          destination: ['Pratapolis', 'MG'],
+          destination: TripDestination(destinationName: ['Pratapolis', 'MG']),
           dateRange: DateTimeRange(
             start: DateTime.parse("2023-01-01"),
             end: DateTime.parse("2023-01-10"),
@@ -52,7 +54,7 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
         ),
         ItineraryModel(
           id: '3',
-          destination: ['Pratapolis', 'MG'],
+          destination: TripDestination(destinationName: ['Pratapolis', 'MG']),
           dateRange: DateTimeRange(
             start: DateTime.parse("2023-01-01"),
             end: DateTime.parse("2023-01-10"),

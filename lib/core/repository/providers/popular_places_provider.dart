@@ -1,4 +1,19 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:turismo_mobile/core/models/destination/trip_place_model.dart';
+import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 
-final popularCitiesProvider = Provider<List<TripDestination>>((_) => []);
+final popularCitiesProvider = Provider<List<TripDestination>>(
+  (_) => [
+    TripDestination(
+      destinationName: ['Mumbai', 'India'],
+    ),
+    TripDestination(
+      destinationName: ['Rio de Janeiro', 'Brazil'],
+    ),
+    TripDestination(
+      destinationName: ['Vaticano'],
+    ),
+    TripDestination(
+      destinationName: ['Dubai', 'Emirados Arabes'],
+    ),
+  ],
+);

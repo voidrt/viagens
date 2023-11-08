@@ -58,7 +58,7 @@ class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.only(left: Paddings.big),
+          padding: const EdgeInsets.only(left: Paddings.big + 5),
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Visibility(
