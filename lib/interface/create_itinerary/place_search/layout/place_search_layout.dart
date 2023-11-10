@@ -18,6 +18,14 @@ class PlaceSearchLayout extends StatelessWidget {
           icon: const Icon(LineIcons.arrowLeft),
           onPressed: () => context.pop(),
         ),
+        widgets: [
+          IconButton(
+            onPressed: () => context.pushNamed('trip-duration'),
+            icon: const Icon(
+              LineIcons.check,
+            ),
+          ),
+        ],
       ),
       body: SafeArea(
         child: LayoutBuilder(
@@ -26,6 +34,18 @@ class PlaceSearchLayout extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const PlaceSearchBar(),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                      top: Paddings.medium,
+                      bottom: Paddings.medium,
+                    ),
+                    child: Text(
+                      'Cidades Populares',
+                      style: Theme.of(context).textTheme.titleLarge,
+                    ),
+                  ),
+                ),
                 Divider(
                   color: Theme.of(context).colorScheme.shadow,
                   indent: Paddings.big - 10,

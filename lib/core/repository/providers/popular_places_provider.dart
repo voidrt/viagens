@@ -15,5 +15,11 @@ final popularCitiesProvider = Provider<List<TripDestination>>(
     TripDestination(
       destinationName: ['Dubai', 'Emirados Arabes'],
     ),
+    TripDestination(
+      destinationName: ['Dubai', 'Emirados Arabes'],
+    ),
+    TripDestination(
+      destinationName: ['Dubai', 'Emirados Arabes'],
+    ),
   ],
 );
