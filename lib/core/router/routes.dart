@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:turismo_mobile/interface/auth/login_screen.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/layout/place_search_layout.dart';
