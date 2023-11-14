@@ -28,13 +28,11 @@ class Routes {
         name: 'create-itinerary',
         path: '/create',
         builder: (context, state) => const PlaceSearchLayout(),
-        routes: [
-          GoRoute(
-            name: 'trip-duration',
-            path: '/create/trip-duration',
-            builder: (context, state) => const TripDurationLayout(),
-          ),
-        ],
+      ),
+      GoRoute(
+        name: 'trip-duration',
+        path: '/trip-duration',
+        builder: (context, state) => const TripDurationLayout(),
       ),
     ],
   );

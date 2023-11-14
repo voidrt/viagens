@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/theme/light_theme/colors.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
@@ -24,6 +25,13 @@ class PlaceSearchBar extends StatelessWidget {
         fillColor: Theme.of(context).colorScheme.onBackground,
         hintText: 'Pesquise uma cidade',
         filled: true,
+        icon: const Icon(
+          LineIcons.search,
+        ),
+        contentPadding: const EdgeInsets.symmetric(
+          vertical: Paddings.small,
+          horizontal: Paddings.big,
+        ),
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: LightThemeColors.lightGrey,
@@ -34,10 +42,6 @@ class PlaceSearchBar extends StatelessWidget {
           borderSide: BorderSide(
             color: LightThemeColors.lightGrey,
           ),
-        ),
-        contentPadding: const EdgeInsets.symmetric(
-          vertical: Paddings.small,
-          horizontal: Paddings.big,
         ),
       );
 }

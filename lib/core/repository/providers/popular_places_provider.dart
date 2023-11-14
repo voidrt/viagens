@@ -5,21 +5,27 @@ final popularCitiesProvider = Provider<List<TripDestination>>(
   (_) => [
     TripDestination(
       destinationName: ['Mumbai', 'India'],
+      countryCode: 'c_in',
     ),
     TripDestination(
       destinationName: ['Rio de Janeiro', 'Brazil'],
+      countryCode: 'br',
     ),
     TripDestination(
       destinationName: ['Vaticano'],
+      countryCode: 'va',
     ),
     TripDestination(
       destinationName: ['Dubai', 'Emirados Arabes'],
+      countryCode: 'ae',
     ),
     TripDestination(
       destinationName: ['Dubai', 'Emirados Arabes'],
+      countryCode: 'ae',
     ),
     TripDestination(
       destinationName: ['Dubai', 'Emirados Arabes'],
+      countryCode: 'ae',
     ),
   ],
 );

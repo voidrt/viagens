@@ -21,8 +21,10 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
       return [
         ItineraryModel(
           id: '1',
-          destination:
-              TripDestination(destinationName: ['Bueno Brandao', 'MG']),
+          destination: TripDestination(
+            destinationName: ['Bueno Brandao', 'BR'],
+            countryCode: 'br',
+          ),
           image:
               'https://upload.wikimedia.org/wikipedia/commons/1/1b/Bueno_Brand%C3%A3o.JPG',
           dateRange: DateTimeRange(
@@ -39,7 +41,10 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
         ),
         ItineraryModel(
           id: '2',
-          destination: TripDestination(destinationName: ['Pratapolis', 'MG']),
+          destination: TripDestination(
+            destinationName: ['Pratapolis', 'BR'],
+            countryCode: 'br',
+          ),
           dateRange: DateTimeRange(
             start: DateTime.parse("2023-01-01"),
             end: DateTime.parse("2023-01-10"),
@@ -54,7 +59,10 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
         ),
         ItineraryModel(
           id: '3',
-          destination: TripDestination(destinationName: ['Pratapolis', 'MG']),
+          destination: TripDestination(
+            destinationName: ['Pratapolis', 'BR'],
+            countryCode: 'br',
+          ),
           dateRange: DateTimeRange(
             start: DateTime.parse("2023-01-01"),
             end: DateTime.parse("2023-01-10"),

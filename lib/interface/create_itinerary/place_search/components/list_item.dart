@@ -1,28 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
+import 'package:dash_flags/dash_flags.dart';
 
 class PopularCitiesListItem extends StatelessWidget {
   const PopularCitiesListItem({
     super.key,
-    required this.city,
+    required this.place,
   });
 
-  final TripDestination city;
+  final TripDestination place;
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
+    return Container(
+      margin: const EdgeInsets.symmetric(
+        horizontal: Paddings.kDefault,
+      ),
       child: Row(
         children: [
+          CountryFlag(country: Country.fromCode(place.countryCode), height: 15),
           Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: Paddings.kDefault,
-              vertical: Paddings.small,
+              vertical: Paddings.medium,
             ),
             child: Text(
-              city.destinationName.join(', '),
+              place.destinationName.join(', '),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
         ],

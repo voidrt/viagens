@@ -17,7 +17,7 @@ class PopularPlaces extends ConsumerWidget {
       child: ListView.builder(
         itemCount: popularCities.length,
         itemBuilder: (context, item) {
-          return PopularCitiesListItem(city: popularCities[item]);
+          return PopularCitiesListItem(place: popularCities[item]);
         },
       ),
     );
