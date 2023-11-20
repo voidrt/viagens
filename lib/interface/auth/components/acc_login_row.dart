@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/core/repository/authentication/authentication.dart';
+import 'package:turismo_mobile/core/authentication/authentication.dart';
 import 'package:turismo_mobile/interface/auth/components/acc_login_tile.dart';
 
 class AccLoginRow extends StatelessWidget {

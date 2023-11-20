@@ -8,24 +8,20 @@ final popularCitiesProvider = Provider<List<TripDestination>>(
       countryCode: 'c_in',
     ),
     TripDestination(
-      destinationName: ['Rio de Janeiro', 'Brazil'],
+      destinationName: ['Rio de Janeiro', 'Brasil'],
       countryCode: 'br',
     ),
     TripDestination(
-      destinationName: ['Vaticano'],
-      countryCode: 'va',
+      destinationName: ['Paris, France'],
+      countryCode: 'fr',
     ),
     TripDestination(
       destinationName: ['Dubai', 'Emirados Arabes'],
       countryCode: 'ae',
     ),
     TripDestination(
-      destinationName: ['Dubai', 'Emirados Arabes'],
-      countryCode: 'ae',
-    ),
-    TripDestination(
-      destinationName: ['Dubai', 'Emirados Arabes'],
-      countryCode: 'ae',
-    ),
+      destinationName: ['Cosmopolis', 'Brasil'],
+      countryCode: 'br',
+    )
   ],
 );

@@ -13,6 +13,14 @@ class PopularPlaces extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     List<TripDestination> popularCities = ref.watch(popularCitiesProvider);
 
+    popularCities.sort(
+      (element, otherElement) {
+        return element.destinationName[0].compareTo(
+          otherElement.destinationName[0],
+        );
+      },
+    );
+
     return Expanded(
       child: ListView.builder(
         itemCount: popularCities.length,
