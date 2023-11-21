@@ -8,10 +8,6 @@ final popularCitiesProvider = Provider<List<TripDestination>>(
       countryCode: 'c_in',
     ),
     TripDestination(
-      destinationName: ['Rio de Janeiro', 'Brasil'],
-      countryCode: 'br',
-    ),
-    TripDestination(
       destinationName: ['Paris, France'],
       countryCode: 'fr',
     ),

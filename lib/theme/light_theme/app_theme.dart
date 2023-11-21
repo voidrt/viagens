@@ -15,10 +15,10 @@ class LightTheme {
     ),
     //? COLORS
     unselectedWidgetColor: Colors.white.withOpacity(0.67),
-
+    dividerColor: LightThemeColors.lightGrey.withOpacity(0.1),
     colorScheme: ColorScheme.fromSeed(
-      seedColor: LightThemeColors.primary,
       brightness: Brightness.light,
+      seedColor: LightThemeColors.primary,
       primary: LightThemeColors.primary,
       secondary: LightThemeColors.secondary,
       error: LightThemeColors.errorRed,

@@ -34,22 +34,16 @@ class PlaceSearchLayout extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const PlaceSearchBar(),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                      top: Paddings.medium,
-                      bottom: Paddings.medium,
-                    ),
-                    child: Text(
-                      'Cidades Populares',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: Paddings.medium,
+                    bottom: Paddings.medium,
+                    left: Paddings.kDefault,
                   ),
-                ),
-                Divider(
-                  color: Theme.of(context).colorScheme.shadow,
-                  indent: Paddings.big - 10,
-                  endIndent: Paddings.big - 10,
+                  child: Text(
+                    'Cidades Populares',
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
                 ),
                 const PopularPlaces(),
               ],

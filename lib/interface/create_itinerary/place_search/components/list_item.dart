@@ -13,25 +13,36 @@ class PopularCitiesListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        horizontal: Paddings.kDefault,
-      ),
-      child: Row(
-        children: [
-          CountryFlag(country: Country.fromCode(place.countryCode), height: 15),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: Paddings.kDefault,
-              vertical: Paddings.medium,
-            ),
-            child: Text(
-              place.destinationName.join(', '),
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: Paddings.kDefault,
           ),
-        ],
-      ),
+          child: Row(
+            children: [
+              CountryFlag(
+                country: Country.fromCode(place.countryCode),
+                height: 15,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: Paddings.kDefault,
+                  vertical: Paddings.medium,
+                ),
+                child: Text(
+                  place.destinationName.join(', '),
+                  style: Theme.of(context).textTheme.bodySmall,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const Divider(
+          indent: Paddings.kDefault,
+          endIndent: Paddings.big + 5,
+        )
+      ],
     );
   }
 }

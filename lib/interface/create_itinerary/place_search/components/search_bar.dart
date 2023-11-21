@@ -13,7 +13,7 @@ class PlaceSearchBar extends StatelessWidget {
         top: Paddings.kDefault,
         bottom: Paddings.small,
         left: Paddings.big,
-        right: Paddings.big,
+        right: Paddings.big + 10,
       ),
       child: TextField(
         decoration: getSearchBarDecoration(context),
