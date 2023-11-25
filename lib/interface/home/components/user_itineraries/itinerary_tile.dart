@@ -60,7 +60,7 @@ class ItineraryTile extends StatelessWidget {
                     backgroundColor: colors.secondary,
                     padding: 15,
                     roundness: 15,
-                    roundBorder: const BorderRadius.only(
+                    border: const BorderRadius.only(
                       topLeft: Radius.circular(5),
                       topRight: Radius.circular(5),
                       bottomLeft: Radius.circular(20),

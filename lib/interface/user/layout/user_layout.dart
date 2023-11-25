@@ -37,7 +37,7 @@ class UserLayout extends StatelessWidget {
                   child: BoldButton(
                     onTap: () => AuthenticationService().logOut(),
                     text: 'Sair',
-                    roundBorder: BorderRadius.circular(20),
+                    border: BorderRadius.circular(20),
                   ),
                 ),
               ],

@@ -33,7 +33,7 @@ class InputSection extends StatelessWidget {
               password: password.text,
             );
           },
-          roundBorder: BorderRadius.circular(20),
+          border: BorderRadius.circular(20),
         ),
       ],
     );

@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:turismo_mobile/interface/create_itinerary/place_search/components/cities_list.dart';
-import 'package:turismo_mobile/interface/create_itinerary/place_search/components/search_bar.dart';
+import 'package:turismo_mobile/interface/create_itinerary/place_search/layout/search_bar.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
-import 'package:turismo_mobile/theme/padding/padding.dart';
 
-class PlaceSearchLayout extends StatelessWidget {
+class PlaceSearchLayout extends ConsumerStatefulWidget {
   const PlaceSearchLayout({super.key});
 
+  @override
+  ConsumerState<PlaceSearchLayout> createState() => _PlaceSearchLayoutState();
+}
+
+class _PlaceSearchLayoutState extends ConsumerState<PlaceSearchLayout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,29 +31,8 @@ class PlaceSearchLayout extends StatelessWidget {
           ),
         ],
       ),
-      body: SafeArea(
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            return Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const PlaceSearchBar(),
-                Padding(
-                  padding: const EdgeInsets.only(
-                    top: Paddings.medium,
-                    bottom: Paddings.medium,
-                    left: Paddings.kDefault,
-                  ),
-                  child: Text(
-                    'Cidades Populares',
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
-                ),
-                const PopularPlaces(),
-              ],
-            );
-          },
-        ),
+      body: const SafeArea(
+        child: SearchCity(),
       ),
     );
   }

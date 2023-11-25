@@ -3,8 +3,8 @@ import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 import 'package:dash_flags/dash_flags.dart';
 
-class PopularCitiesListItem extends StatelessWidget {
-  const PopularCitiesListItem({
+class CityListItem extends StatelessWidget {
+  const CityListItem({
     super.key,
     required this.place,
   });

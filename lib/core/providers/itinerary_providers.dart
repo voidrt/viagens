@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:turismo_mobile/core/api/urls.dart';
+import 'package:turismo_mobile/core/api/constants.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:http/http.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
