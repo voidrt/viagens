@@ -10,6 +10,7 @@ class ForgotPassword extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(
         top: Paddings.kDefault,
+        bottom: Paddings.kDefault,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,

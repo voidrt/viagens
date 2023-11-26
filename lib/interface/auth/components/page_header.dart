@@ -20,12 +20,12 @@ class IconHeader extends StatelessWidget {
             bottom: Paddings.small,
           ),
           child: CircleAvatar(
-            radius: screenHeight / 12,
+            radius: screenHeight / 14,
             backgroundColor: Theme.of(context).colorScheme.shadow,
             child: Center(
               child: Image.asset(
                 'assets/images/full-logo.png',
-                scale: 1.04,
+                scale: 1.2,
               ),
             ),
           ),

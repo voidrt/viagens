@@ -35,8 +35,7 @@ class _AppTextFieldState extends State<AppTextField> {
         controller: widget._controller,
         obscureText: widget.obscureText,
         decoration: InputDecoration(
-          fillColor: Theme.of(context).colorScheme.onBackground,
-          filled: true,
+          contentPadding: const EdgeInsets.all(Paddings.kDefault + 5),
           hintText: widget.hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(15)),

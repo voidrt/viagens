@@ -14,16 +14,47 @@ class LocationListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        ListTile(
-          onTap: press,
-          horizontalTitleGap: 0,
-          leading: const Icon(LineIcons.city),
-          title: Text(
-            location,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: Paddings.kDefault,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              ShaderMask(
+                blendMode: BlendMode.srcIn,
+                shaderCallback: (Rect bounds) => LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                    colors.primary,
+                    colors.secondary,
+                  ],
+                ).createShader(bounds),
+                child: Icon(
+                  LineIcons.locationArrow,
+                  size: 50,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
+              ),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: Paddings.kDefault,
+                    vertical: Paddings.medium,
+                  ),
+                  child: Text(
+                    location,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         const Divider(

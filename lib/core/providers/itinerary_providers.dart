@@ -3,7 +3,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:turismo_mobile/core/api/constants.dart';
+import 'package:turismo_mobile/core/api/network_utils.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:http/http.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
@@ -13,7 +13,7 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
     FutureProvider(
   (ref) async {
     final Response httpResponse = await get(
-      Uri.parse(Api.itineraryUrl),
+      Uri.parse(NetworkUtil.itineraryUrl),
     );
     if (httpResponse.statusCode == 200) {
       final Map<String, dynamic> itineraryJson = jsonDecode(httpResponse.body);

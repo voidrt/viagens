@@ -26,7 +26,7 @@ class BoldButton extends StatelessWidget {
     return GestureDetector(
       onTap: () => onTap(),
       child: Container(
-        padding: EdgeInsets.all(padding ?? 25),
+        padding: EdgeInsets.all(padding ?? 20),
         margin: EdgeInsets.only(
           top: margin ?? 0,
         ),
