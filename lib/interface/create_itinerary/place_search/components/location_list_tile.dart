@@ -38,7 +38,7 @@ class LocationListTile extends StatelessWidget {
                 ).createShader(bounds),
                 child: Icon(
                   LineIcons.locationArrow,
-                  size: 50,
+                  size: 20,
                   color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
