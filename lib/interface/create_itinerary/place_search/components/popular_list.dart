@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 import 'package:turismo_mobile/core/providers/popular_places_provider.dart';
-import 'package:turismo_mobile/interface/create_itinerary/place_search/components/list_item.dart';
+import 'package:turismo_mobile/interface/create_itinerary/place_search/components/popular_places_item.dart';
 
 class PopularPlaces extends ConsumerWidget {
   const PopularPlaces({
@@ -24,7 +24,7 @@ class PopularPlaces extends ConsumerWidget {
     return ListView.builder(
       itemCount: popularCities.length,
       itemBuilder: (context, item) {
-        return CityListItem(place: popularCities[item]);
+        return PopularPlacesListItem(place: popularCities[item]);
       },
     );
   }

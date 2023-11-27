@@ -10,6 +10,7 @@ final autocompleteProvider = Provider.family((ref, String input) async {
           {
             "input": input,
             "language": 'pt_BR',
+            "types": "(cities)",
             "key": NetworkUtil.placesApiKey,
           },
         ),

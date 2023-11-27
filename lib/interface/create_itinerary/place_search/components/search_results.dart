@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/core/models/autocomplete/autocomplate_prediction.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/components/location_list_tile.dart';
+import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class SearchResults extends StatelessWidget {
   const SearchResults({
@@ -16,7 +17,6 @@ class SearchResults extends StatelessWidget {
       itemBuilder: (context, index) {
         return LocationListTile(
           location: results[index].description!,
-          press: () {},
         );
       },
     );
