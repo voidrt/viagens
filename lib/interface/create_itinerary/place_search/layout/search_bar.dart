@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/autocomplete/autocomplate_prediction.dart';
-import 'package:turismo_mobile/core/providers/autocomplete_provider.dart';
+import 'package:turismo_mobile/core/providers/network/autocomplete_provider.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/components/popular_list.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/components/search_results.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
