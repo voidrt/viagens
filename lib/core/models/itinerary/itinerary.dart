@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
+import 'package:uuid/uuid.dart';
 
 class ItineraryModel {
   const ItineraryModel({
-    required this.id,
-    required this.destination,
-    required this.days,
-    required this.dateRange,
+    this.id,
+    this.destination,
+    this.days,
+    this.dateRange,
     this.image,
   });
 
-  final String id;
-  final TripDestination destination;
-  final DateTimeRange dateRange;
-  final List<TripDayModel> days;
+  final Uuid? id;
+  final TripDestination? destination;
+  final DateTimeRange? dateRange;
+  final List<TripDayModel>? days;
   final String? image;
 
   factory ItineraryModel.fromJson(Map<String, dynamic> json) {

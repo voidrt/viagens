@@ -8,6 +8,7 @@ import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:http/http.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
+import 'package:uuid/uuid.dart';
 
 final FutureProvider<List<ItineraryModel>> itineraryListProvider =
     FutureProvider(
@@ -20,7 +21,7 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
 
       return [
         ItineraryModel(
-          id: '1',
+          id: const Uuid(),
           destination: TripDestination(
             destinationName: ['Bueno Brandao', 'BR'],
             countryCode: 'br',
@@ -40,7 +41,7 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
           ],
         ),
         ItineraryModel(
-          id: '2',
+          id: const Uuid(),
           destination: TripDestination(
             destinationName: ['Pratapolis', 'BR'],
             countryCode: 'br',
@@ -58,7 +59,7 @@ final FutureProvider<List<ItineraryModel>> itineraryListProvider =
           ],
         ),
         ItineraryModel(
-          id: '3',
+          id: const Uuid(),
           destination: TripDestination(
             destinationName: ['Pratapolis', 'BR'],
             countryCode: 'br',

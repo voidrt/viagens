@@ -1,11 +1,11 @@
 class TripDestination {
   TripDestination({
     required this.destinationName,
-    required this.countryCode,
+    this.countryCode,
   });
 
   final List<String> destinationName;
-  final String countryCode;
+  final String? countryCode;
 
   factory TripDestination.fromJson(Map<String, dynamic> json) {
     return TripDestination(

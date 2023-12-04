@@ -19,8 +19,8 @@ class ItineraryTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateStart = item.dateRange.start;
-    final dateEnd = item.dateRange.end;
+    final dateStart = item.dateRange!.start;
+    final dateEnd = item.dateRange!.end;
     final colors = Theme.of(context).colorScheme;
 
     return Container(

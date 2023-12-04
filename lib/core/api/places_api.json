@@ -1,0 +1,185 @@
+{
+    "html_attributions" : [],
+    "result" : 
+    {
+       "address_components" : 
+       [
+          {
+             "long_name" : "Bueno Brandão",
+             "short_name" : "Bueno Brandão",
+             "types" : 
+             [
+                "locality",
+                "political"
+             ]
+          },
+          {
+             "long_name" : "Bueno Brandão",
+             "short_name" : "Bueno Brandão",
+             "types" : 
+             [
+                "administrative_area_level_2",
+                "political"
+             ]
+          },
+          {
+             "long_name" : "State of Minas Gerais",
+             "short_name" : "MG",
+             "types" : 
+             [
+                "administrative_area_level_1",
+                "political"
+             ]
+          },
+          {
+             "long_name" : "Brazil",
+             "short_name" : "BR",
+             "types" : 
+             [
+                "country",
+                "political"
+             ]
+          },
+          {
+             "long_name" : "37578-000",
+             "short_name" : "37578-000",
+             "types" : 
+             [
+                "postal_code"
+             ]
+          }
+       ],
+       "adr_address" : "Bueno Brandão, \u003cspan class=\"region\"\u003eState of Minas Gerais\u003c/span\u003e, \u003cspan class=\"postal-code\"\u003e37578-000\u003c/span\u003e, \u003cspan class=\"country-name\"\u003eBrazil\u003c/span\u003e",
+       "formatted_address" : "Bueno Brandão, State of Minas Gerais, 37578-000, Brazil",
+       "geometry" : 
+       {
+          "location" : 
+          {
+             "lat" : -22.4405796,
+             "lng" : -46.3490648
+          },
+          "viewport" : 
+          {
+             "northeast" : 
+             {
+                "lat" : -22.43046327358769,
+                "lng" : -46.3383758842138
+             },
+             "southwest" : 
+             {
+                "lat" : -22.45246823799248,
+                "lng" : -46.35539578350747
+             }
+          }
+       },
+       "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+       "icon_background_color" : "#7B9EB0",
+       "icon_mask_base_uri" : "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+       "name" : "Bueno Brandão",
+       "photos" : 
+       [
+          {
+             "height" : 705,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/115311450936005801053\"\u003eMarcia Francischini\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFhOG_jXPUFuUwuuaAr0Lzjca_r21FbRw3pqSyN1FElHzscNxteYQ6CqkxTdhrthmU9w8P5Ewc2BxrKe0XpOL7n7GJ_PLJm6lei0XRWZGrrcNbs94vzrasR4CMgSXJP8oxq4TRy3l-yaLEdY78lNFEq7Mo4BDxqSUc33KBNYcBGI-Cyo",
+             "width" : 720
+          },
+          {
+             "height" : 720,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/113523183512413146261\"\u003eAngelise Ittner\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFjb7tYrkALizLBA_v6U7M9SwctflPltVej9xtcJyi6qzYon3X5IpB9K00p167i5AXSQW3v5JtMd_WlP4ecWORz5LvYwyNlNzF-72howKnv9k_3w3V3DtBSCQsZVuPNN8dUjPZL6eZfelgBkrOAzoCLKIAvpf4BPuCJaiA53WdYPQrCF",
+             "width" : 1280
+          },
+          {
+             "height" : 4000,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/100676066981540047591\"\u003eEliana Nogueira\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFgHz4T7TB6E0UsumU5xIamM_JXowuz1l1OXbPqOKdPC6B2r8yAV28uJInjVBE7OTdhvEgs37kMDA3vMWr_EGyV7GlbPHdXZV8GKmHMU9WjAwj_Hcw2_ocIRl-wGULLw9lsLyCNN-5hSMwzm2RKBQoQJI1usWIdQnS3eczDbv5z9DfHC",
+             "width" : 1800
+          },
+          {
+             "height" : 1600,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/111012169225829587975\"\u003eClaudinei Leme\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFiNKZ-o9jGSt0bD5SGLvJypGGePLZjNkMW3eY5zQ-hiEe1aAOqUo1E0BDpGChN3dFaMyq30Qzu-B_k6bq_yYhxFPe5IOyk-SWgClFkSH4erASHQcrHywsID_uDLhecR8UCeAEsUMvfvs6W4uK08uc4W9m63sdrPCak1_Q8jfd3knkzo",
+             "width" : 1200
+          },
+          {
+             "height" : 885,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/115311450936005801053\"\u003eMarcia Francischini\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFhkxV4E2POUkHfUOqYEs3IqesAirmTg6umkTl18ajASUOD91WtOaKFD8PnAFoRpzanlX6o3B6bhIwLZYRDNKAjjZLB4EOm2Zaw1rJpeLE00epkVhyE1mCFaULtBw5RRMKkIPma4T-dWf_WsvegVaDevBl1TBZL8YUE71AiDPlt7fKTe",
+             "width" : 720
+          },
+          {
+             "height" : 3264,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/104468910253755954484\"\u003eLEANDRO SILVA\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFgmdTAxYDAF7XRkaq6d5HwmmvVHJBDxC40BM89fevLwsy03-n_8HTpQLiVl0EEa1BmorJnl6DmG2K6KJa7LK1VbuINlEjW4kbUvq0qV-PtjV9IB9sKePEVFsuyXdpVkKI8wTBKYg1YvUzeyXame77x3H-sim4XMc86TjcWfezpng6Kf",
+             "width" : 1504
+          },
+          {
+             "height" : 2048,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/113523183512413146261\"\u003eAngelise Ittner\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFguidzEvy89uRHk4bfHw03zS6Gw1uGbmxXCgbXjdkQwjqTJxv0xLid_S9cxAwDasWsqx6ttxI8o0oDLXztiSkVR7H5Cy-JweaEBwwqHX5nX-gvvJiY28ZUayokVoahcZO_FKHsc3D8FnbKdlyEddzc9AVDMqKjudSXNDGMESmJlByYS",
+             "width" : 1536
+          },
+          {
+             "height" : 4032,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/111115892400806524756\"\u003eMatheus Mehler\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFhNT-0Ny864y46_vN-dZcngr5fxFgfodPJbTIysE1rIskozmQMfEDWr54FZ5FkWkPVoi5wwh7EsBDL0rgGor4pKxaV-zoqKmPMid5uMzddH8yMDhu8nBn9wyLYiVvX1BrOIi8srQMDDddh6x3m3vHesDiAJEsU02ls2VOaSfqDdfzyQ",
+             "width" : 3024
+          },
+          {
+             "height" : 3264,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/113430943592891090832\"\u003eAretusa Azevedo\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFgf9sYYVQ5OmKV7qWUvhfVxCEa1qE3MwQkeW9FQp06SdDBtH59LvTqEGQ0bPcAMRJNbF_gZ0UPFRpvwkz7osmeqp5gdHxPTZaqWFqBml1yVowKNPuHo-y6PeDcTXoG2H_qDaDtFbtxiCzQgASrR2Bj6o700ggSjlnXuPJgFqVmz_ZPe",
+             "width" : 4928
+          },
+          {
+             "height" : 4032,
+             "html_attributions" : 
+             [
+                "\u003ca href=\"https://maps.google.com/maps/contrib/106813510406682592606\"\u003eMilene Rodrigues\u003c/a\u003e"
+             ],
+             "photo_reference" : "AWU5eFiOq53jZqvgcFva19En_O3vImrz_TdK1eDTH_R8sN0r1H1BAMqg3veBu3tELcwFWJ3icHEKemijneQqDGUlrlNzRp0TuNM2nFIf8GwuNnactOQMa1oIEaL-zpbs6oVVQmvf0ZvBapjzT1a0RMuWnJL4cy2vP2dKCxVY5Py8TfB_y3Sq",
+             "width" : 3024
+          }
+       ],
+       "place_id" : "ChIJsUR6wRZmyZQRJ03dGVyAv6w",
+       "reference" : "ChIJsUR6wRZmyZQRJ03dGVyAv6w",
+       "types" : 
+       [
+          "locality",
+          "political"
+       ],
+       "url" : "https://maps.google.com/?q=Bueno+Brand%C3%A3o,+State+of+Minas+Gerais,+37578-000,+Brazil&ftid=0x94c96616c17a44b1:0xacbf805c19dd4d27",
+       "utc_offset" : -180,
+       "vicinity" : "Bueno Brandão",
+       "website" : "http://buenobrandao.mg.gov.br/novosite/"
+    },
+    "status" : "OK"
+ }

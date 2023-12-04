@@ -3,11 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_day.dart';
 import 'package:turismo_mobile/core/models/itinerary/trip_place_model.dart';
+import 'package:uuid/uuid.dart';
 
 final Provider<List<ItineraryModel>> recommendedTripsProvider = Provider(
   (ref) => [
     ItineraryModel(
-      id: '1',
+      id: const Uuid(),
       destination: TripDestination(
         destinationName: ['Bueno Brandao', 'MG'],
         countryCode: 'br',
@@ -27,7 +28,7 @@ final Provider<List<ItineraryModel>> recommendedTripsProvider = Provider(
       ],
     ),
     ItineraryModel(
-      id: '2',
+      id: const Uuid(),
       destination: TripDestination(
         destinationName: ['Hong Kong', 'CH'],
         countryCode: 'ch',
@@ -47,7 +48,7 @@ final Provider<List<ItineraryModel>> recommendedTripsProvider = Provider(
       ],
     ),
     ItineraryModel(
-      id: '3',
+      id: const Uuid(),
       destination: TripDestination(
         destinationName: ['Pratapolis', 'MG'],
         countryCode: 'br',
@@ -67,7 +68,7 @@ final Provider<List<ItineraryModel>> recommendedTripsProvider = Provider(
       ],
     ),
     ItineraryModel(
-      id: '4',
+      id: const Uuid(),
       destination: TripDestination(
         destinationName: ['Hong Kong', 'CH'],
         countryCode: 'ch',

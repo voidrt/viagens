@@ -52,12 +52,12 @@ class TileImage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  item.destination.destinationName[0],
+                  item.destination!.destinationName[0],
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: colors.onBackground, fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  item.destination.destinationName[1],
+                  item.destination!.destinationName[1],
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                       color: colors.onBackground, fontWeight: FontWeight.bold),
                 ),
@@ -68,7 +68,7 @@ class TileImage extends StatelessWidget {
             bottom: Paddings.kDefault,
             left: Paddings.big,
             child: Text(
-              DateFormat.yMMMd().format(item.dateRange.start),
+              DateFormat.yMMMd().format(item.dateRange!.start),
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     color: colors.background,
                     fontWeight: FontWeight.bold,

@@ -30,7 +30,7 @@ class PopularPlacesListItem extends StatelessWidget {
               child: Row(
                 children: [
                   CountryFlag(
-                    country: Country.fromCode(place.countryCode),
+                    country: Country.fromCode(place.countryCode!),
                     height: 15,
                   ),
                   Padding(

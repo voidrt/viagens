@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class LocationListTile extends StatelessWidget {
   const LocationListTile({
     Key? key,
-    required this.location,
+    required this.locationName,
+    required this.onTapFunction,
   }) : super(key: key);
 
-  final String location;
+  final String locationName;
+  final Function onTapFunction;
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +19,7 @@ class LocationListTile extends StatelessWidget {
     return Column(
       children: [
         GestureDetector(
-          onTap: () {
-            context.pushNamed('trip-duration');
-          },
+          onTap: () => onTapFunction(),
           child: Card(
             color: Theme.of(context).colorScheme.background,
             elevation: 0,
@@ -54,7 +53,7 @@ class LocationListTile extends StatelessWidget {
                         vertical: Paddings.medium,
                       ),
                       child: Text(
-                        location,
+                        locationName,
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                     ),

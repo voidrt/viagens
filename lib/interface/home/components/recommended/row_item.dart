@@ -55,7 +55,7 @@ class TravelRowItem extends StatelessWidget {
           child: SizedBox(
             width: width / 4 - 5,
             child: Text(
-              trip.destination.destinationName[0],
+              trip.destination?.destinationName[0] ?? '',
               style: Theme.of(context).textTheme.bodySmall!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontWeight: FontWeight.w500,

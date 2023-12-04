@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/interface/auth/login_screen.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/layout/place_search_layout.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/layout/trip_duration.dart';
@@ -32,7 +33,10 @@ class Routes {
       GoRoute(
         name: 'trip-duration',
         path: '/trip-duration',
-        builder: (context, state) => const TripDurationLayout(),
+        builder: (context, state) {
+          ItineraryModel model = state.extra as ItineraryModel;
+          return TripDurationLayout(model: model);
+        },
       ),
     ],
   );

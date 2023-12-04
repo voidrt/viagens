@@ -33,14 +33,14 @@ class _SearchCityState extends ConsumerState<SearchCity> {
           child: TextField(
             textInputAction: TextInputAction.search,
             onChanged: (input) async {
+              setState(
+                () => activeSearch = input != '',
+              );
               final result = await ref.watch(autocompleteProvider(input));
 
               if (result!.predictions != null) {
                 searchResults = result.predictions ?? [];
               }
-              setState(
-                () => activeSearch = input != '',
-              );
             },
             decoration: const InputDecoration(
               hintText: 'Pesquise uma cidade',
