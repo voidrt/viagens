@@ -17,8 +17,8 @@ class HomeLayout extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final AsyncValue<List<ItineraryModel>> userTrips =
-        ref.watch(itineraryListProvider);
+    final userTrips = ref.watch(itineraryListProvider);
+    final recommendedTrips = ref.watch(recommendedTripsProvider);
 
     final ColorScheme colors = Theme.of(context).colorScheme;
 
@@ -46,27 +46,28 @@ class HomeLayout extends ConsumerWidget {
           },
         ),
       ),
-      floatingActionButton: GestureDetector(
-        onTap: () => context.pushNamed('create-itinerary'),
-        child: Stack(
-          children: [
-            GradientMask(
-              child: FloatingActionButton(
-                onPressed: () {},
-                elevation: 4,
-              ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.pushNamed('create-itinerary'),
+        elevation: 4,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: [
+                colors.primary,
+                colors.secondary,
+              ],
             ),
-            Positioned.fill(
-              child: Align(
-                alignment: Alignment.center,
-                child: Icon(
-                  Icons.add,
-                  color: colors.background,
-                  size: 30,
-                ),
-              ),
-            )
-          ],
+          ),
+          child: Center(
+            child: Icon(
+              Icons.add,
+              color: colors.background,
+              size: 30,
+            ),
+          ),
         ),
       ),
       body: SafeArea(
@@ -78,7 +79,7 @@ class HomeLayout extends ConsumerWidget {
                   child: Column(
                     children: [
                       RecommendedTripsRow(
-                        recommendedTrips: ref.watch(recommendedTripsProvider),
+                        recommendedTrips: recommendedTrips,
                         constraints: constraints,
                         alreadyActive: false,
                       ),

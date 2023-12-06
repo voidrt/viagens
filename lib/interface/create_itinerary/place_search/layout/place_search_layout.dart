@@ -15,24 +15,27 @@ class PlaceSearchLayout extends ConsumerStatefulWidget {
 class _PlaceSearchLayoutState extends ConsumerState<PlaceSearchLayout> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: ClearAppBar(
-        appBar: AppBar(),
-        leading: IconButton(
-          icon: const Icon(LineIcons.arrowLeft),
-          onPressed: () => context.pop(),
-        ),
-        widgets: [
-          IconButton(
-            onPressed: () => context.pushNamed('trip-duration'),
-            icon: const Icon(
-              LineIcons.check,
-            ),
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        appBar: ClearAppBar(
+          appBar: AppBar(),
+          leading: IconButton(
+            icon: const Icon(LineIcons.arrowLeft),
+            onPressed: () => context.pop(),
           ),
-        ],
-      ),
-      body: const SafeArea(
-        child: SearchCity(),
+          widgets: [
+            IconButton(
+              onPressed: () => context.pushNamed('trip-duration'),
+              icon: const Icon(
+                LineIcons.check,
+              ),
+            ),
+          ],
+        ),
+        body: const SafeArea(
+          child: SearchCity(),
+        ),
       ),
     );
   }
