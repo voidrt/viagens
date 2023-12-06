@@ -4,10 +4,13 @@ import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/providers/itinerary_providers.dart';
+import 'package:turismo_mobile/core/providers/recommended_tab.dart';
+import 'package:turismo_mobile/interface/home/components/recommended/recommended_trips_row.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/add_itinerary_text.dart';
 import 'package:turismo_mobile/interface/home/layout/available_travels.dart';
 
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
+import 'package:turismo_mobile/interface/widgets/gradient_mask.dart';
 
 class HomeLayout extends ConsumerWidget {
   const HomeLayout({super.key});
@@ -22,6 +25,7 @@ class HomeLayout extends ConsumerWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: ClearAppBar(
+        title: 'App do Joao',
         appBar: AppBar(),
         widgets: [
           Icon(
@@ -42,13 +46,28 @@ class HomeLayout extends ConsumerWidget {
           },
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => context.pushNamed('create-itinerary'),
-        tooltip: 'Adicionar itinerario',
-        backgroundColor: colors.secondary,
-        foregroundColor: colors.background,
-        elevation: 4,
-        child: const Icon(Icons.add),
+      floatingActionButton: GestureDetector(
+        onTap: () => context.pushNamed('create-itinerary'),
+        child: Stack(
+          children: [
+            GradientMask(
+              child: FloatingActionButton(
+                onPressed: () {},
+                elevation: 4,
+              ),
+            ),
+            Positioned.fill(
+              child: Align(
+                alignment: Alignment.center,
+                child: Icon(
+                  Icons.add,
+                  color: colors.background,
+                  size: 30,
+                ),
+              ),
+            )
+          ],
+        ),
       ),
       body: SafeArea(
         child: LayoutBuilder(
@@ -58,6 +77,11 @@ class HomeLayout extends ConsumerWidget {
                 return SingleChildScrollView(
                   child: Column(
                     children: [
+                      RecommendedTripsRow(
+                        recommendedTrips: ref.watch(recommendedTripsProvider),
+                        constraints: constraints,
+                        alreadyActive: false,
+                      ),
                       data.isEmpty
                           ? AddItineraryText(colors: colors)
                           : AvailableTravels(

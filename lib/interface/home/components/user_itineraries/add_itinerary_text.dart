@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:turismo_mobile/interface/widgets/gradient_mask.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 import 'dart:math' as math;
 
@@ -23,11 +24,13 @@ class AddItineraryText extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Transform.rotate(
-              angle: math.pi / 6.0,
-              child: Icon(
-                LineIcons.paperPlaneAlt,
-                size: 100,
-                color: colors.primary,
+              angle: math.pi / 4,
+              child: GradientMask(
+                child: Icon(
+                  LineIcons.mapPin,
+                  size: 100,
+                  color: Theme.of(context).colorScheme.secondary,
+                ),
               ),
             ),
             Text(

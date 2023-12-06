@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
-import 'package:turismo_mobile/core/providers/recommended_tab.dart';
-import 'package:turismo_mobile/interface/home/components/recommended/recommended_trips_row.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/itinerary_tile.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
@@ -28,10 +26,6 @@ class _AvailableTravelsState extends ConsumerState<AvailableTravels> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          RecommendedTripsRow(
-            recommendedTrips: ref.watch(recommendedTripsProvider),
-            constraints: widget.constraints,
-          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(
               Paddings.big,

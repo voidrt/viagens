@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LightThemeColors {
-  static const primary = Color.fromARGB(255, 4, 204, 107);
-  static const secondary = Color.fromARGB(255, 40, 203, 132);
+  static const primary = Color.fromARGB(255, 69, 252, 157);
+  static const secondary = Color.fromARGB(255, 1, 184, 156);
   static const textColor = Color.fromARGB(255, 20, 20, 20);
   static const background = Color.fromARGB(255, 243, 243, 242);
   static const onBackground = Color.fromARGB(255, 253, 253, 253);

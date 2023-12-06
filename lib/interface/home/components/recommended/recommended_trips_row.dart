@@ -8,18 +8,19 @@ class RecommendedTripsRow extends StatefulWidget {
     super.key,
     required this.recommendedTrips,
     required this.constraints,
+    required this.alreadyActive,
   });
 
   final List<ItineraryModel> recommendedTrips;
   final BoxConstraints constraints;
+  final bool alreadyActive;
 
   @override
   State<RecommendedTripsRow> createState() => _RecommendedTripsRowState();
 }
 
 class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
-  late bool isActive = true;
-
+  late bool isActive = widget.alreadyActive;
   @override
   Widget build(BuildContext context) {
     final ColorScheme colors = Theme.of(context).colorScheme;

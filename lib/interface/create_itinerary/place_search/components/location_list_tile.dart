@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class LocationListTile extends StatelessWidget {
@@ -14,8 +13,6 @@ class LocationListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final colors = Theme.of(context).colorScheme;
-
     return Column(
       children: [
         GestureDetector(
@@ -30,22 +27,6 @@ class LocationListTile extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  ShaderMask(
-                    blendMode: BlendMode.srcIn,
-                    shaderCallback: (Rect bounds) => LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        colors.primary,
-                        colors.secondary,
-                      ],
-                    ).createShader(bounds),
-                    child: Icon(
-                      LineIcons.locationArrow,
-                      size: 20,
-                      color: Theme.of(context).colorScheme.secondary,
-                    ),
-                  ),
                   Expanded(
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
