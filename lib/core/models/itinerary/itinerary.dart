@@ -18,6 +18,15 @@ class ItineraryModel {
   final List<TripDayModel>? days;
   final String? image;
 
+  @override
+  String toString() {
+    return '''
+    id: $id,
+    destination: ${destination?.destinationName},
+    dateRange: $dateRange,
+''';
+  }
+
   factory ItineraryModel.fromJson(Map<String, dynamic> json) {
     return ItineraryModel(
       id: json['id'],

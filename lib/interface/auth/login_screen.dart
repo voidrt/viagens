@@ -21,26 +21,23 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
         ),
-        child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Scaffold(
-            resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.transparent,
-            body: SafeArea(
-              child: LayoutBuilder(
-                builder: (context, constraints) {
-                  return Center(
-                    child: Column(
-                      children: [
-                        IconHeader(
-                          screenHeight: constraints.maxHeight,
-                        ),
-                        const LoginScreenLayout(),
-                      ],
-                    ),
-                  );
-                },
-              ),
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          backgroundColor: Colors.transparent,
+          body: SafeArea(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return Center(
+                  child: Column(
+                    children: [
+                      IconHeader(
+                        screenHeight: constraints.maxHeight,
+                      ),
+                      const LoginScreenLayout(),
+                    ],
+                  ),
+                );
+              },
             ),
           ),
         ),

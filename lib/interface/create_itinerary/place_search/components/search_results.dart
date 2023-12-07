@@ -33,7 +33,7 @@ class SearchResults extends StatelessWidget {
         return LocationListTile(
           locationName: city.description ?? '',
           onTapFunction: () {
-            context.goNamed('trip-duration', extra: itineraryModel);
+            context.pushNamed('trip-duration', extra: itineraryModel);
           },
         );
       },

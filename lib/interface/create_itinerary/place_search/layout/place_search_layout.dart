@@ -18,6 +18,7 @@ class _PlaceSearchLayoutState extends ConsumerState<PlaceSearchLayout> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: ClearAppBar(
           appBar: AppBar(),
           leading: IconButton(

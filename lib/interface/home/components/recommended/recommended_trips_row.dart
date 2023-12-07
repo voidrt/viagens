@@ -58,27 +58,38 @@ class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
             ),
           ],
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: Paddings.big + 5),
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Visibility(
-              visible: isActive,
-              child: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  ...List.generate(
-                    widget.recommendedTrips.length,
-                    (index) => TravelRowItem(
-                      trip: widget.recommendedTrips[index],
-                      height: widget.constraints.maxHeight,
-                      width: widget.constraints.maxWidth,
-                    ),
+        Column(
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Visibility(
+                visible: isActive,
+                child: Padding(
+                  padding: const EdgeInsets.only(left: Paddings.big + 5),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      ...List.generate(
+                        widget.recommendedTrips.length,
+                        (index) => TravelRowItem(
+                          trip: widget.recommendedTrips[index],
+                          height: widget.constraints.maxHeight,
+                          width: widget.constraints.maxWidth,
+                        ),
+                      ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ),
-          ),
+            Visibility(
+              visible: isActive,
+              child: const Divider(
+                indent: Paddings.big + 5,
+                endIndent: Paddings.big + 10,
+              ),
+            ),
+          ],
         ),
       ],
     );

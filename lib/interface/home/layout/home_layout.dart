@@ -2,7 +2,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/providers/itinerary_providers.dart';
 import 'package:turismo_mobile/core/providers/recommended_tab.dart';
 import 'package:turismo_mobile/interface/home/components/recommended/recommended_trips_row.dart';
@@ -10,7 +9,7 @@ import 'package:turismo_mobile/interface/home/components/user_itineraries/add_it
 import 'package:turismo_mobile/interface/home/layout/available_travels.dart';
 
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
-import 'package:turismo_mobile/interface/widgets/gradient_mask.dart';
+import 'package:turismo_mobile/theme/light_theme/colors.dart';
 
 class HomeLayout extends ConsumerWidget {
   const HomeLayout({super.key});
