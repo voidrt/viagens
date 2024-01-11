@@ -34,7 +34,10 @@ class TextRow extends StatelessWidget {
           ],
         ),
         Padding(
-          padding: const EdgeInsets.all(Paddings.small),
+          padding: const EdgeInsets.symmetric(
+            vertical: Paddings.small + 5,
+            horizontal: Paddings.medium,
+          ),
           child: Text(
             'Insira a quantidade de dias que durara a sua viagem:',
             style: Theme.of(context).textTheme.bodySmall,

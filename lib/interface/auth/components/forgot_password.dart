@@ -19,7 +19,7 @@ class ForgotPassword extends StatelessWidget {
             'Esqueceu sua senha? ',
             style: Theme.of(context).textTheme.bodySmall!.copyWith(
                   fontSize: FontSize.small,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
           ),
         ],

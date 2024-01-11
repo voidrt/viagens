@@ -3,10 +3,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
-import 'package:turismo_mobile/interface/create_itinerary/trip_duration/widgets/text_row.dart';
+import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/text_row.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
-import 'package:turismo_mobile/interface/widgets/gradient_mask.dart';
-import 'package:turismo_mobile/interface/widgets/outlined_container.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class TripDurationLayout extends ConsumerWidget {
