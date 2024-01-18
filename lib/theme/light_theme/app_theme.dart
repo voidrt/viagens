@@ -13,6 +13,8 @@ class LightTheme {
       bodySmall: Texts.bodySmall,
       displayMedium: Texts.titleMedium,
       displayLarge: Texts.titleLarge,
+      headlineMedium: Texts.headlineMedium,
+      headlineLarge: Texts.headlineLarge,
     ),
     //? COLORS
     unselectedWidgetColor: Colors.white.withOpacity(0.67),

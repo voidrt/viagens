@@ -20,6 +20,12 @@ class Texts {
     fontWeight: FontWeight.w800,
     fontFamily: 'Exo',
   );
+  static const TextStyle headlineMedium = TextStyle(
+    color: LightThemeColors.textColor,
+    fontWeight: FontWeight.w400,
+    fontFamily: 'Exo',
+    fontSize: FontSize.big - 6,
+  );
   static const TextStyle headlineLarge = TextStyle(
     color: LightThemeColors.textColor,
     fontWeight: FontWeight.w800,
@@ -30,7 +36,7 @@ class Texts {
 
 class FontSize {
   static const double small = 14;
-  static const double defaultBody = 16;
+  static const double defaultBody = 18;
   static const double defaultTitle = 22;
   static const double big = 26;
   static const double bigger = 36;

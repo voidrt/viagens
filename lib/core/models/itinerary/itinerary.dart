@@ -27,6 +27,22 @@ class ItineraryModel {
 ''';
   }
 
+  ItineraryModel copyWith({
+    Uuid? id,
+    TripDestination? destination,
+    DateTimeRange? dateRange,
+    List<TripDayModel>? days,
+    String? image,
+  }) {
+    return ItineraryModel(
+      id: id ?? this.id,
+      destination: destination ?? this.destination,
+      dateRange: dateRange ?? this.dateRange,
+      days: days ?? this.days,
+      image: image ?? this.image,
+    );
+  }
+
   factory ItineraryModel.fromJson(Map<String, dynamic> json) {
     return ItineraryModel(
       id: json['id'],

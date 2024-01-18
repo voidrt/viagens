@@ -7,6 +7,7 @@ import 'package:turismo_mobile/core/providers/recommended_tab.dart';
 import 'package:turismo_mobile/interface/home/components/recommended/recommended_trips_row.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/add_itinerary_text.dart';
 import 'package:turismo_mobile/interface/home/layout/available_travels.dart';
+
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 
 class HomeLayout extends ConsumerWidget {
