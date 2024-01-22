@@ -11,12 +11,12 @@ class Texts {
   static const TextStyle titleMedium = TextStyle(
     color: LightThemeColors.textColor,
     fontFamily: 'Exo',
-    fontSize: FontSize.big,
+    fontSize: FontSize.defaultTitle,
     fontWeight: FontWeight.w500,
   );
   static const TextStyle titleLarge = TextStyle(
     color: LightThemeColors.textColor,
-    fontSize: FontSize.bigger,
+    fontSize: FontSize.big,
     fontWeight: FontWeight.w800,
     fontFamily: 'Exo',
   );
@@ -35,10 +35,10 @@ class Texts {
 }
 
 class FontSize {
-  static const double small = 14;
-  static const double defaultBody = 18;
-  static const double defaultTitle = 22;
-  static const double big = 26;
-  static const double bigger = 36;
-  static const double biggest = 70;
+  static const double small = 12;
+  static const double defaultBody = 14;
+  static const double defaultTitle = 20;
+  static const double big = 24;
+  static const double bigger = 34;
+  static const double biggest = 60;
 }

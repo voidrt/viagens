@@ -9,7 +9,7 @@ class ForgotPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(
-        top: Paddings.kDefault,
+        top: Paddings.medium,
         bottom: Paddings.kDefault,
       ),
       child: Row(

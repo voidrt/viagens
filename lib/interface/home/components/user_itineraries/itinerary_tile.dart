@@ -27,8 +27,8 @@ class ItineraryTile extends StatelessWidget {
       height: height / 3,
       width: width,
       margin: const EdgeInsets.symmetric(
-        vertical: Paddings.big - 10,
-        horizontal: Paddings.big + 5,
+        vertical: Paddings.kDefault,
+        horizontal: Paddings.kDefault + 5,
       ),
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(

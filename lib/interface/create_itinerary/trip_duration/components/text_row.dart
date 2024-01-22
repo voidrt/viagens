@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/interface/widgets/gradient_mask.dart';
-import 'package:turismo_mobile/interface/widgets/outlined_container.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class TextRow extends StatelessWidget {
@@ -12,34 +11,40 @@ class TextRow extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            const OutlinedGradientContainer(
-              child: GradientMask(
+        Padding(
+          padding: const EdgeInsets.only(
+            left: Paddings.big,
+            top: Paddings.kDefault,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const GradientMask(
                 child: Icon(
                   LineIcons.calendarWithWeekFocus,
-                  size: 30,
+                  size: 35,
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: Paddings.medium,
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: Paddings.medium,
+                ),
+                child: Text(
+                  'Dias de viagem',
+                  style: Theme.of(context).textTheme.displayMedium,
+                ),
               ),
-              child: Text(
-                'Duracao da viagem.',
-                style: Theme.of(context).textTheme.displayMedium,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(
-            vertical: Paddings.small + 5,
-            horizontal: Paddings.medium,
+            vertical: Paddings.small,
+            horizontal: Paddings.big,
           ),
           child: Text(
-            'Insira a quantidade de dias que durara a sua viagem:',
+            ' Escolha a duracao da sua viagem:',
+            textAlign: TextAlign.center,
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ),

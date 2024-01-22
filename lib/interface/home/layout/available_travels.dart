@@ -28,7 +28,7 @@ class _AvailableTravelsState extends ConsumerState<AvailableTravels> {
         children: [
           Padding(
             padding: const EdgeInsets.fromLTRB(
-              Paddings.big,
+              Paddings.kDefault,
               Paddings.small,
               0,
               0,

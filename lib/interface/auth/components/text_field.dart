@@ -29,13 +29,16 @@ class _AppTextFieldState extends State<AppTextField> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(
-        vertical: Paddings.small / 2,
+        vertical: Paddings.small,
       ),
       child: TextField(
         controller: widget._controller,
         obscureText: widget.obscureText,
         decoration: InputDecoration(
-          contentPadding: const EdgeInsets.all(Paddings.kDefault + 5),
+          contentPadding: const EdgeInsets.symmetric(
+            horizontal: Paddings.kDefault + 5,
+            vertical: Paddings.kDefault,
+          ),
           hintText: widget.hintText,
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(15)),

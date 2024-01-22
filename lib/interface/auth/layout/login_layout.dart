@@ -32,7 +32,7 @@ class LoginScreenLayout extends StatelessWidget {
               InputSection(),
               DividerText(),
               AccLoginRow(),
-              SizedBox(height: Paddings.bigger),
+              SizedBox(height: Paddings.big),
               CreateAccountText()
             ],
           ),

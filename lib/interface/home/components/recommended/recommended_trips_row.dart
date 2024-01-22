@@ -32,7 +32,7 @@ class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(
-                Paddings.big,
+                Paddings.kDefault,
                 Paddings.kDefault,
                 0,
                 Paddings.kDefault,
