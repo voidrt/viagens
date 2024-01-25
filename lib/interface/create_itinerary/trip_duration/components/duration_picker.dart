@@ -23,7 +23,7 @@ class DurationPicker extends ConsumerWidget {
       height: maxHeight / 14,
       width: double.infinity,
       padding: const EdgeInsets.symmetric(
-        vertical: Paddings.medium,
+        vertical: Paddings.small,
         horizontal: Paddings.small,
       ),
       decoration: BoxDecoration(

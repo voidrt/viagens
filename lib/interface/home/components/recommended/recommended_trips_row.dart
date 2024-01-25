@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/interface/home/components/recommended/row_item.dart';
+import 'package:turismo_mobile/interface/widgets/divided_text.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class RecommendedTripsRow extends StatefulWidget {
@@ -21,6 +22,7 @@ class RecommendedTripsRow extends StatefulWidget {
 
 class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
   late bool isActive = widget.alreadyActive;
+
   @override
   Widget build(BuildContext context) {
     final ColorScheme colors = Theme.of(context).colorScheme;
@@ -28,68 +30,59 @@ class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Row(
-          children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(
-                Paddings.kDefault,
-                Paddings.kDefault,
-                0,
-                Paddings.kDefault,
-              ),
-              child: Text(
-                'Recomendados',
-                style: Theme.of(context)
-                    .textTheme
-                    .titleLarge!
-                    .copyWith(fontWeight: FontWeight.w600),
-              ),
-            ),
-            IconButton(
-              onPressed: () => setState(() {
-                isActive = !isActive;
-              }),
-              icon: Icon(
-                isActive
-                    ? Icons.keyboard_arrow_up_rounded
-                    : Icons.keyboard_arrow_down_rounded,
-                color: colors.shadow,
-              ),
-            ),
-          ],
-        ),
-        Column(
-          children: [
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Visibility(
-                visible: isActive,
-                child: Padding(
-                  padding: const EdgeInsets.only(left: Paddings.big + 5),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      ...List.generate(
-                        widget.recommendedTrips.length,
-                        (index) => TravelRowItem(
-                          trip: widget.recommendedTrips[index],
-                          height: widget.constraints.maxHeight,
-                          width: widget.constraints.maxWidth,
-                        ),
-                      ),
-                    ],
-                  ),
+        DividedText(
+          constraints: widget.constraints,
+          child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: Paddings.kDefault,
+                  top: Paddings.kDefault,
+                  bottom: Paddings.kDefault,
+                ),
+                child: Text(
+                  'Recomendados',
+                  style: Theme.of(context)
+                      .textTheme
+                      .titleLarge!
+                      .copyWith(fontWeight: FontWeight.w600),
                 ),
               ),
-            ),
-            Visibility(
-              visible: isActive,
-              child: const Divider(
-                indent: Paddings.big + 5,
-                endIndent: Paddings.big + 10,
+              IconButton(
+                onPressed: () => setState(() {
+                  isActive = !isActive;
+                }),
+                icon: Icon(
+                  isActive
+                      ? Icons.keyboard_arrow_up_rounded
+                      : Icons.keyboard_arrow_down_rounded,
+                  color: colors.shadow,
+                ),
+              ),
+            ],
+          ),
+        ),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Visibility(
+            visible: isActive,
+            child: Padding(
+              padding: const EdgeInsets.only(left: Paddings.kDefault + 5),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ...List.generate(
+                    widget.recommendedTrips.length,
+                    (index) => TravelRowItem(
+                      trip: widget.recommendedTrips[index],
+                      height: widget.constraints.maxHeight,
+                      width: widget.constraints.maxWidth,
+                    ),
+                  ),
+                ],
               ),
             ),
-          ],
+          ),
         ),
       ],
     );

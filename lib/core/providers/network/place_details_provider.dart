@@ -13,6 +13,7 @@ final placeDetailsProvider = Provider.family(
             },
           ),
         );
+    // ignore: avoid_print
     if (response != null) print(response);
   },
 );

@@ -44,7 +44,12 @@ class TripDurationLayout extends ConsumerWidget {
                 ),
               ),
               const SizedBox(height: Paddings.kDefault),
-              const CalendarWidget(),
+              const Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: CalendarWidget(),
+                ),
+              ),
             ],
           );
         },

@@ -4,12 +4,16 @@ import 'package:turismo_mobile/core/router/routes.dart';
 import 'package:turismo_mobile/theme/light_theme/app_theme.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'package:flutter/services.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
+  //? Setting for real life test device
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitDown]);
 
   runApp(
     const ProviderScope(child: Turismo()),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/interface/home/components/user_itineraries/itinerary_tile.dart';
+import 'package:turismo_mobile/interface/widgets/divided_text.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class AvailableTravels extends ConsumerStatefulWidget {
@@ -27,18 +28,21 @@ class _AvailableTravelsState extends ConsumerState<AvailableTravels> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.fromLTRB(
-              Paddings.kDefault,
-              Paddings.small,
-              0,
-              0,
+            padding: const EdgeInsets.only(
+              left: Paddings.kDefault,
+              top: Paddings.small,
             ),
-            child: Text(
-              'Suas Viagens',
-              style: Theme.of(context)
-                  .textTheme
-                  .titleLarge!
-                  .copyWith(fontWeight: FontWeight.w600),
+            child: DividedText(
+              indent: Paddings.kDefault,
+              endIndent: Paddings.big,
+              constraints: widget.constraints,
+              child: Text(
+                'Suas Viagens',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge!
+                    .copyWith(fontWeight: FontWeight.w600),
+              ),
             ),
           ),
           ...List.generate(

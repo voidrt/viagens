@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final tripDurationProvider = ChangeNotifierProvider<TripDuration>(
-  (ref) => TripDuration(duration: 0),
+  (ref) => TripDuration(duration: 1),
 );
 
 class TripDuration extends ChangeNotifier {
