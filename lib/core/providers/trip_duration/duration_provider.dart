@@ -13,7 +13,7 @@ class TripDuration extends ChangeNotifier {
   int duration;
 
   void decrement() {
-    duration = max(duration - 1, 0);
+    duration = max(duration - 1, 1);
     notifyListeners();
   }
 

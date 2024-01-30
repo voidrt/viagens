@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
+import 'package:turismo_mobile/core/providers/trip_duration/duration_provider.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/calendar.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/duration_picker.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/text_row.dart';
@@ -19,6 +20,8 @@ class TripDurationLayout extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    var tripDuration = ref.watch(tripDurationProvider).duration - 1;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: ClearAppBar(
@@ -36,19 +39,14 @@ class TripDurationLayout extends ConsumerWidget {
               const SizedBox(
                 height: Paddings.kDefault,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: Paddings.big),
-                child: DurationPicker(
-                  maxHeight: constraints.maxHeight,
-                  model: model,
-                ),
+              DurationPicker(
+                maxHeight: constraints.maxHeight,
+                model: model,
               ),
-              const SizedBox(height: Paddings.kDefault),
-              const Expanded(
-                child: Align(
-                  alignment: Alignment.bottomCenter,
-                  child: CalendarWidget(),
-                ),
+              const SizedBox(height: Paddings.medium),
+              CalendarWidget(
+                tripDuration: tripDuration,
+                model: model,
               ),
             ],
           );

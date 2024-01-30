@@ -31,6 +31,7 @@ class _RecommendedTripsRowState extends State<RecommendedTripsRow> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         DividedText(
+          endIndent: Paddings.big,
           constraints: widget.constraints,
           child: Row(
             children: [

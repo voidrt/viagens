@@ -24,8 +24,8 @@ class SearchResults extends StatelessWidget {
           id: const Uuid(),
           destination: TripDestination(
             destinationName: [
-              city.structuredFormatting!.mainText!,
-              city.structuredFormatting!.secondaryText!
+              city.structuredFormatting?.mainText ?? '',
+              city.structuredFormatting?.secondaryText ?? ''
             ],
           ),
         );

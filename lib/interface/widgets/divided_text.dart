@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class DividedText extends StatelessWidget {
   const DividedText({
