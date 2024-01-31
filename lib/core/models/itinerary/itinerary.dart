@@ -21,7 +21,7 @@ class ItineraryModel {
   @override
   String toString() {
     return '''
-    id: $id,
+    id: ${id.toString()},
     destination: ${destination?.destinationName},
     dateRange: $dateRange,
 ''';

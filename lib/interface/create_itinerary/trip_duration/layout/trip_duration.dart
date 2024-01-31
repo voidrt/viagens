@@ -7,6 +7,7 @@ import 'package:turismo_mobile/core/providers/trip_duration/duration_provider.da
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/calendar.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/duration_picker.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/text_row.dart';
+import 'package:turismo_mobile/interface/widgets/button.dart';
 import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
@@ -33,22 +34,26 @@ class TripDurationLayout extends ConsumerWidget {
       ),
       body: LayoutBuilder(
         builder: (context, constraints) {
-          return Column(
-            children: [
-              const TextRow(),
-              const SizedBox(
-                height: Paddings.kDefault,
-              ),
-              DurationPicker(
-                maxHeight: constraints.maxHeight,
-                model: model,
-              ),
-              const SizedBox(height: Paddings.medium),
-              CalendarWidget(
-                tripDuration: tripDuration,
-                model: model,
-              ),
-            ],
+          return Padding(
+            padding: const EdgeInsets.symmetric(horizontal: Paddings.big),
+            child: Column(
+              children: [
+                const TextRow(),
+                const SizedBox(
+                  height: Paddings.kDefault,
+                ),
+                DurationPicker(
+                  maxHeight: constraints.maxHeight,
+                  model: model,
+                ),
+                const SizedBox(height: Paddings.medium),
+                CalendarWidget(
+                  tripDuration: tripDuration,
+                  model: model,
+                  constraints: constraints,
+                ),
+              ],
+            ),
           );
         },
       ),

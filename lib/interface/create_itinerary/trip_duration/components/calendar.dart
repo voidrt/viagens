@@ -11,10 +11,12 @@ class CalendarWidget extends ConsumerStatefulWidget {
     super.key,
     required this.tripDuration,
     required this.model,
+    required this.constraints,
   });
 
   final int tripDuration;
   final ItineraryModel? model;
+  final BoxConstraints constraints;
 
   @override
   ConsumerState<CalendarWidget> createState() => _CalendarWidgetState();
@@ -23,62 +25,92 @@ class CalendarWidget extends ConsumerStatefulWidget {
 class _CalendarWidgetState extends ConsumerState<CalendarWidget> {
   final DateTime dateNow = DateTime.now();
   DateTime _focusedDay = DateTime.now();
-  DateTime? _selectedDay;
-  DateTime? _rangeEndDate;
+  DateTime? tripStartDate;
+  DateTime? tripEndDate;
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          Paddings.big,
-          Paddings.kDefault,
-          Paddings.big,
-          Paddings.bigger,
+    return Column(
+      children: [
+        SizedBox(
+          height: widget.constraints.maxHeight / 2,
+          child: TableCalendar(
+            startingDayOfWeek: StartingDayOfWeek.sunday,
+            daysOfWeekHeight: Paddings.bigger,
+            shouldFillViewport: true,
+            //? Style
+            calendarStyle: CalendarStyle(
+              outsideDaysVisible: true,
+              isTodayHighlighted: false,
+              rangeHighlightColor: Theme.of(context).colorScheme.secondary,
+              withinRangeTextStyle: TextStyle(
+                color: Theme.of(context).colorScheme.background,
+              ),
+              selectedDecoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                shape: BoxShape.circle,
+              ),
+              rangeStartDecoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                shape: BoxShape.circle,
+              ),
+              rangeEndDecoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                shape: BoxShape.circle,
+              ),
+            ),
+            //? Variables
+            focusedDay: _focusedDay,
+            firstDay: dateNow,
+            lastDay: dateNow.add(
+              const Duration(days: 365),
+            ),
+            //? Functions
+            rangeStartDay: tripStartDate,
+            rangeEndDay: tripEndDate,
+            onDaySelected: (selectedDay, focusedDay) {
+              setState(
+                () {
+                  tripStartDate = selectedDay;
+                  _focusedDay = focusedDay;
+                  tripEndDate = tripStartDate?.add(
+                    Duration(days: widget.tripDuration),
+                  );
+                },
+              );
+            },
+          ),
         ),
-        child: TableCalendar(
-          startingDayOfWeek: StartingDayOfWeek.sunday,
-          daysOfWeekHeight: Paddings.bigger,
-          shouldFillViewport: true,
-          //? Style
-          calendarStyle: CalendarStyle(
-            outsideDaysVisible: true,
-            isTodayHighlighted: false,
-            rangeHighlightColor: Theme.of(context).colorScheme.secondary,
-            withinRangeTextStyle: TextStyle(
-              color: Theme.of(context).colorScheme.background,
-            ),
-            selectedDecoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
-              shape: BoxShape.circle,
-            ),
-            rangeEndDecoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.secondary,
-              shape: BoxShape.circle,
-            ),
+        Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: Paddings.big,
+            vertical: Paddings.big,
           ),
-          //? Variables
-          focusedDay: _focusedDay,
-          firstDay: dateNow,
-          lastDay: dateNow.add(
-            const Duration(days: 365),
-          ),
-          //? Functions
-          rangeStartDay: _selectedDay,
-          rangeEndDay: _rangeEndDate,
-          onDaySelected: (selectedDay, focusedDay) {
-            setState(
-              () {
-                _selectedDay = selectedDay;
-                _focusedDay = focusedDay;
-                _rangeEndDate = _selectedDay?.add(
-                  Duration(days: widget.tripDuration),
+          child: BoldButton(
+            onTap: () {
+              if (tripStartDate == null) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('Selecione uma data para inicio da viagem.'),
+                  ),
                 );
-              },
-            );
-          },
-        ),
-      ),
+                return null;
+              }
+              context.pushNamed(
+                'sla',
+                extra: widget.model!.copyWith(
+                  dateRange: DateTimeRange(
+                    start: tripStartDate!,
+                    end: tripEndDate!,
+                  ),
+                ),
+              );
+            },
+            text: 'Concluido',
+            border: BorderRadius.circular(20),
+          ),
+        )
+      ],
     );
   }
 }

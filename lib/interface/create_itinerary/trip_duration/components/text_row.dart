@@ -13,7 +13,6 @@ class TextRow extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(
-            left: Paddings.big,
             top: Paddings.kDefault,
           ),
           child: Row(
@@ -40,7 +39,6 @@ class TextRow extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(
             vertical: Paddings.small,
-            horizontal: Paddings.big,
           ),
           child: Text(
             ' Escolha a duracao da sua viagem:',
