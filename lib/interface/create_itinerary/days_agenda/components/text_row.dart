@@ -3,13 +3,12 @@ import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/interface/widgets/gradient_mask.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
-class TripDurationTextRow extends StatelessWidget {
-  const TripDurationTextRow({super.key});
+class AgendaTextRow extends StatelessWidget {
+  const AgendaTextRow({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
           padding: const EdgeInsets.only(
@@ -20,7 +19,7 @@ class TripDurationTextRow extends StatelessWidget {
             children: [
               const GradientMask(
                 child: Icon(
-                  LineIcons.calendarWithWeekFocus,
+                  LineIcons.clock,
                   size: 35,
                 ),
               ),
@@ -29,7 +28,7 @@ class TripDurationTextRow extends StatelessWidget {
                   left: Paddings.medium,
                 ),
                 child: Text(
-                  'Dias de viagem',
+                  'Cronograma da viagem',
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
               ),
@@ -38,11 +37,11 @@ class TripDurationTextRow extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(
-            vertical: Paddings.small,
+            vertical: Paddings.medium,
+            horizontal: Paddings.small,
           ),
           child: Text(
-            ' Escolha a duracao da sua viagem:',
-            textAlign: TextAlign.center,
+            'Faca seu cronograma de acordo com o tempo livre em cada dia',
             style: Theme.of(context).textTheme.bodySmall,
           ),
         ),

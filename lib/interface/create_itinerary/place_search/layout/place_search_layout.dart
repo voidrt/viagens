@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/layout/search_bar.dart';
-import 'package:turismo_mobile/interface/widgets/clear_appbar.dart';
+import 'package:turismo_mobile/interface/widgets/custom_scaffold.dart';
 
 class PlaceSearchLayout extends ConsumerStatefulWidget {
   const PlaceSearchLayout({super.key});
@@ -17,23 +17,14 @@ class _PlaceSearchLayoutState extends ConsumerState<PlaceSearchLayout> {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
-      child: Scaffold(
-        resizeToAvoidBottomInset: false,
-        appBar: ClearAppBar(
-          appBar: AppBar(),
-          leading: IconButton(
-            icon: const Icon(LineIcons.arrowLeft),
-            onPressed: () => context.pop(),
-          ),
-          widgets: [
-            IconButton(
-              onPressed: () => context.pushNamed('trip-duration'),
-              icon: const Icon(
-                LineIcons.check,
-              ),
-            ),
-          ],
+      child: CustomScaffoldWithAppBar(
+        appBarLeading: IconButton(
+          icon: const Icon(LineIcons.arrowLeft),
+          onPressed: () => context.pop(),
         ),
+        actions: const [
+          Text('Passo 1/5'),
+        ],
         body: const SafeArea(
           child: SearchCity(),
         ),

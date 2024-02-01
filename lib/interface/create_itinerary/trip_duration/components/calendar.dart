@@ -94,10 +94,10 @@ class _CalendarWidgetState extends ConsumerState<CalendarWidget> {
                     content: Text('Selecione uma data para inicio da viagem.'),
                   ),
                 );
-                return null;
+                return 14;
               }
               context.pushNamed(
-                'sla',
+                'agenda',
                 extra: widget.model!.copyWith(
                   dateRange: DateTimeRange(
                     start: tripStartDate!,
