@@ -19,19 +19,22 @@ class CustomScaffoldWithAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      resizeToAvoidBottomInset: false,
-      appBar: ClearAppBar(
-        appBar: AppBar(),
-        leading: appBarLeading ??
-            IconButton(
-              icon: const Icon(LineIcons.arrowLeft),
-              onPressed: () => context.pop(),
-            ),
-        widgets: actions,
-        title: title,
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        resizeToAvoidBottomInset: false,
+        appBar: ClearAppBar(
+          appBar: AppBar(),
+          leading: appBarLeading ??
+              IconButton(
+                icon: const Icon(LineIcons.arrowLeft),
+                onPressed: () => context.pop(),
+              ),
+          widgets: actions,
+          title: title,
+        ),
+        body: body,
       ),
-      body: body,
     );
   }
 }

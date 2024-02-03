@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:turismo_mobile/interface/create_itinerary/place_search/layout/search_bar.dart';
+import 'package:turismo_mobile/interface/create_itinerary/place_search/components/search_bar.dart';
 import 'package:turismo_mobile/interface/widgets/custom_scaffold.dart';
 
 class PlaceSearchLayout extends ConsumerStatefulWidget {

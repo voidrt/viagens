@@ -22,7 +22,7 @@ class Texts {
   );
   static const TextStyle headlineMedium = TextStyle(
     color: LightThemeColors.textColor,
-    fontWeight: FontWeight.w400,
+    fontWeight: FontWeight.w500,
     fontFamily: 'Exo',
     fontSize: FontSize.big - 6,
   );

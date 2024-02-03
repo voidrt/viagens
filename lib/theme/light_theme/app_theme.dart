@@ -29,6 +29,10 @@ class LightTheme {
       shadow: LightThemeColors.black,
     ),
     //? DECORATIONS
+    sliderTheme: const SliderThemeData(
+      activeTrackColor: LightThemeColors.primary,
+      showValueIndicator: ShowValueIndicator.never,
+    ),
     inputDecorationTheme: const InputDecorationTheme(
       fillColor: LightThemeColors.onBackground,
       filled: true,

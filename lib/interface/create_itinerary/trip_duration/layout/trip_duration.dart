@@ -42,7 +42,6 @@ class TripDurationLayout extends ConsumerWidget {
                 ),
                 DurationPicker(
                   maxHeight: constraints.maxHeight,
-                  model: model,
                 ),
                 const SizedBox(height: Paddings.medium),
                 CalendarWidget(

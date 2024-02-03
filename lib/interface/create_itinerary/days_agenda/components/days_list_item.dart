@@ -18,18 +18,20 @@ class DaysListItem extends StatefulWidget {
 class _DaysListItemState extends State<DaysListItem> {
   final String startingTime = '8:00';
   final String endingTime = '18:00';
+  RangeValues values = const RangeValues(8, 18);
 
   @override
   Widget build(BuildContext context) {
+    RangeLabels timestamps = RangeLabels(
+      values.start.round().toString(),
+      values.end.round().toString(),
+    );
+
     return Container(
       margin: const EdgeInsets.symmetric(
         vertical: Paddings.small,
       ),
       padding: const EdgeInsets.all(Paddings.small),
-      decoration: const BoxDecoration(
-        color: Colors.yellow,
-      ),
-      height: widget.constraints.maxHeight / 10,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -40,6 +42,20 @@ class _DaysListItemState extends State<DaysListItem> {
           Text(
             '$startingTime - $endingTime',
             style: Theme.of(context).textTheme.bodySmall,
+          ),
+          RangeSlider(
+            values: values,
+            labels: timestamps,
+            max: 24,
+            divisions: 24,
+            min: 1,
+            onChanged: (userInput) {
+              setState(
+                () {
+                  values = userInput;
+                },
+              );
+            },
           ),
         ],
       ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/core/providers/trip_duration/duration_provider.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
@@ -9,11 +8,9 @@ class DurationPicker extends ConsumerWidget {
   const DurationPicker({
     super.key,
     required this.maxHeight,
-    required this.model,
   });
 
   final double maxHeight;
-  final ItineraryModel? model;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
