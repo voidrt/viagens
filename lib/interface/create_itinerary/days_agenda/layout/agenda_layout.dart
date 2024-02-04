@@ -3,6 +3,7 @@ import 'package:turismo_mobile/core/models/itinerary/itinerary.dart';
 import 'package:turismo_mobile/interface/create_itinerary/days_agenda/components/days_list.dart';
 import 'package:turismo_mobile/interface/create_itinerary/days_agenda/components/text_row.dart';
 import 'package:turismo_mobile/interface/widgets/custom_scaffold.dart';
+import 'package:turismo_mobile/interface/widgets/filling_horizontal_bar.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class DaysAgenda extends StatelessWidget {
@@ -17,7 +18,7 @@ class DaysAgenda extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomScaffoldWithAppBar(
       actions: const [
-        Text('Passo 3/5'),
+        ProgressHorizontalBar(progress: 3),
       ],
       body: LayoutBuilder(
         builder: (context, constraints) {

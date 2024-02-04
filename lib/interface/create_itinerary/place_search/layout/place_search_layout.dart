@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:turismo_mobile/interface/create_itinerary/place_search/components/search_bar.dart';
 import 'package:turismo_mobile/interface/widgets/custom_scaffold.dart';
+import 'package:turismo_mobile/interface/widgets/filling_horizontal_bar.dart';
 
 class PlaceSearchLayout extends ConsumerStatefulWidget {
   const PlaceSearchLayout({super.key});
@@ -22,9 +23,7 @@ class _PlaceSearchLayoutState extends ConsumerState<PlaceSearchLayout> {
           icon: const Icon(LineIcons.arrowLeft),
           onPressed: () => context.pop(),
         ),
-        actions: const [
-          Text('Passo 1/5'),
-        ],
+        actions: const [ProgressHorizontalBar(progress: 1)],
         body: const SafeArea(
           child: SearchCity(),
         ),

@@ -8,6 +8,7 @@ import 'package:turismo_mobile/interface/create_itinerary/trip_duration/componen
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/duration_picker.dart';
 import 'package:turismo_mobile/interface/create_itinerary/trip_duration/components/text_row.dart';
 import 'package:turismo_mobile/interface/widgets/custom_scaffold.dart';
+import 'package:turismo_mobile/interface/widgets/filling_horizontal_bar.dart';
 import 'package:turismo_mobile/theme/padding/padding.dart';
 
 class TripDurationLayout extends ConsumerWidget {
@@ -28,7 +29,7 @@ class TripDurationLayout extends ConsumerWidget {
         onPressed: () => context.pop(),
       ),
       actions: const [
-        Text('Passo 2/5'),
+        ProgressHorizontalBar(progress: 2),
       ],
       body: LayoutBuilder(
         builder: (context, constraints) {
